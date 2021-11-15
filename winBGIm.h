@@ -27,7 +27,7 @@
 // --Version 3.3: Oct 4, 1999
 //   Added ismouseclick and getmouseclick
 // --Version 3.4: Dec 21, 1999
-//   Added clearmouseclick.
+//   Added clearmouseclick.!!!!!!!!!!!!!!!!!!!!!!!!!!
 //   Fixed bug causing getmouseclick to fail when x and y are same variable.
 //   Fixed bug in setcolor that sometimes caused the fill color to change
 //   to the drawing color. 
