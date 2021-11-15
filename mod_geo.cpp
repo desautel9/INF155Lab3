@@ -5,7 +5,7 @@
 
 #include "mod_geo.h"
 
-//L'accélération maximale d'un véhicule en KM/h.s
+//L'accélération maximale d'un véhicule en KM/h.s 
 #define VEHICULE_ACCEL_MAX 20
 //La déclaration maximale d'un véhicule en KM/h.s
 #define VEHICULE_DECEL_MAX 20

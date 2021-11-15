@@ -2,7 +2,7 @@
 // Created by anis on 7/31/19.
 //
 
-#include "mod_dessin.h"
+#include "mod_dessin.h"//
 
 /******************** Déclaration des constantes et représentations cachées *****/
 const t_point CENTRE = {LARGEUR_ECRAN_PX / 2, HAUTEUR_ECRAN_PX / 2};

@@ -2,7 +2,7 @@
 //Définit un point dans le plan
 typedef struct {
 	int x; //abscisse
-	int y; //ordonnée
+	int y; //ordonnée//
 } t_point;
 //Définit un polygone qui est un ensemble de points
 typedef struct t_polygone {

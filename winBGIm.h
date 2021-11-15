@@ -14,7 +14,7 @@
 //   Fixed a bug in getpixel.
 // --Version 2.4: November 25, 1998
 //   Added functions getactivepage() and getvisualpage() to get the current
-//   page number of the active and visual pages. In this implementation, the
+//   page number of the active and visual pages. In this implementation, the 
 //   MAX_PAGES is set to 16, but I have used only pages 0 and 1 myself.
 // --Version 3.1: June 17, 1999
 //   Mostly implemented by Mark Richardson:
@@ -30,7 +30,7 @@
 //   Added clearmouseclick.
 //   Fixed bug causing getmouseclick to fail when x and y are same variable.
 //   Fixed bug in setcolor that sometimes caused the fill color to change
-//   to the drawing color.
+//   to the drawing color. 
 
 #ifndef __GRAPHICS_H__
 #define __GRAPHICS_H__
@@ -40,7 +40,6 @@
 #include <stddef.h>
 #include <conio.h>
 #include <windows.h>
-
 
 /** Some different definitions for the Mingw32 g++ compiler and
 *   the Borland 5.0 compiler. Added by Michael Main, June 21, 1999.
