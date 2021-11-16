@@ -23,7 +23,7 @@ du polygone - 1. Si une position invalide a été transmise, il ne faut pas
 ajouter le point.
 La fonction retourne une valeur vraie si le point a bien été ajouté, ou une
 valeur fausse sinon(position non - valide).*/
-} t_polygone;
+
 void geo_rotation_polygone(t_polygone* poly, double angle);
 //Reçoit une référence vers un polygone poly et un angle angle.La fonction
 //effectue la rotation du polygone par rapport à l’origine.
