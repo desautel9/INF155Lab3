@@ -29,21 +29,21 @@ x� = x.cos(angle) - y.sin(angle)
 y� = x.sin(angle) + y.cos(angle) 
 */
 void geo_rotation_point(t_point* point, double angle);
-=======
-void geo_init_polygone(t_polygone* poly, int taille);
+
+void geo_init_polygone(t_polygone* poly, int taille); //David
 /*Initialise le polygone reçu par référence en lui assignant le nombre de
 points définit par la taille reçue.
 Si le nombre de points demandé excède GEO_POLYGONE_MAX_PTS, vous devez
 initialiser le nombre de points du polygone à 0.*/
 
-int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position);
+int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position); //David
 /*Ajoute le point pt reçu en paramètre au tableau de points du polygone à la
 position position.Les positions doivent être entre 0 et le nombre de points
 du polygone - 1. Si une position invalide a été transmise, il ne faut pas
 ajouter le point.
 La fonction retourne une valeur vraie si le point a bien été ajouté, ou une
 valeur fausse sinon(position non - valide).*/
-} t_polygone;
+
 void geo_rotation_polygone(t_polygone* poly, double angle);
 //Reçoit une référence vers un polygone poly et un angle angle.La fonction
 //effectue la rotation du polygone par rapport à l’origine.
