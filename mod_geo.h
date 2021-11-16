@@ -9,3 +9,6 @@ typedef struct t_polygone {
 	t_point points[GEO_POLYGONE_MAX_PTS]; //Tableau statique de points
 	int nb_points; //Nombre de points dans le tableau
 } t_polygone;
+void geo_rotation_polygone(t_polygone* poly, double angle);
+//Reçoit une référence vers un polygone poly et un angle angle.La fonction
+//effectue la rotation du polygone par rapport à l’origine.
