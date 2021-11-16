@@ -15,6 +15,7 @@
 #define VEHICULE_LARGEUR 4
 typedef struct route t_route; //Type-route qui sera défini plus tard
 typedef struct vehicule t_vehicule;
+
 //Définit le type struct vehicule
 struct vehicule {
 	t_polygone geometrie;
@@ -25,3 +26,27 @@ struct vehicule {
 	int voie; //La voie sur laquelle se trouve le véhicule.
 	//-1 si le véhicule n'est sur aucune voie.
 };
+
+void geo_init_polygone(t_polygone* poly, int taille)
+{
+	if (taille > GEO_POLYGONE_MAX_PTS)
+	{
+		taille = 0;
+		*t_polygone = taille;
+	}
+	else
+	{
+		*t_polygone = taille;
+	}
+}
+
+int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position)
+{
+	if (position >= 0 && position <= *poly->nb_points - 1)
+	{
+		*poly->points[position] += pt;
+
+		return 1;
+	}
+	return 0;
+}
