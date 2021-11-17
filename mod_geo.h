@@ -16,7 +16,7 @@ typedef struct t_polygone {
 int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts);
 /*
 Ajoute les nb_pts points se trouvant dans le tableau pts au polygone poly.
-Les points sont ajout�s dans le polygone a partir de la position 0.
+Les points sont ajoutes dans le polygone a partir de la position 0.
 La fonction renvoie une valeur vraie si tous les points du tableau ont pu
 etre ajoutes au polygone, ou valeur fausse sinon.
 */
