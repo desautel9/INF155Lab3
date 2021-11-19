@@ -12,26 +12,29 @@ int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts)
 	return 0;
 }
 
+void geo_rotation_point(t_point* point, double angle)
+{
+}
+
 void geo_init_polygone(t_polygone* poly, int taille)
 {
 	if (taille > GEO_POLYGONE_MAX_PTS)
-	{
 		taille = 0;
-		*t_polygone = taille;
-	}
-	else
-	{
-		*t_polygone = taille;
-	}
+	
+	poly->nb_points = taille;
 }
 
 int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position)
 {
-	if (position >= 0 && position <= *poly->nb_points - 1)
+	if (position >= 0 && position <= poly->nb_points - 1)
 	{
-		*poly->points[position] += pt;
+		poly->points[position] = pt;
 
 		return 1;
 	}
 	return 0;
+}
+
+void geo_rotation_polygone(t_polygone* poly, double angle)
+{
 }

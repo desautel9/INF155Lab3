@@ -1,70 +1,11 @@
 ﻿  main.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(7,3): error C2371: 't_point' : redéfinition ; types de base différents
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(7): message : voir la déclaration de 't_point'
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(10,27): error C2011: 't_polygone' : redéfinition du type 'struct'
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(10): message : voir la déclaration de 't_polygone'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,31): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,43): error C2065: 'vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,51): error C2182: 'vehicule_reset_geometrie' : utilisation non conforme du type 'void'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,38): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,50): error C2065: 'vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,67): error C2062: type 'double' inattendu
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,52): error C2365: 'vehicule_reset_geometrie' : redéfinition ; la précédente définition était 'variable de données'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4): message : voir la déclaration de 'vehicule_reset_geometrie'
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(22,14): error C2079: 'v' utilise une struct de 't_vehicule' non défini
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(29,2): error C2064: le terme ne correspond pas à une fonction qui prend 1 arguments
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(38,34): error C2664: 'void dessiner_vehicule(t_vehicule *,int,t_point)' : impossible de convertir l'argument 1 de 'int *' en 't_vehicule *'
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(38,21): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(43,6): message : voir la déclaration de 'dessiner_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(40,64): error C2664: 'double vehicule_calculer_deplacement(t_vehicule *,double)' : impossible de convertir l'argument 1 de 'int *' en 't_vehicule *'
-H:\INF155\TP3\v1\INF155Lab3\main.cpp(40,59): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
   mod_dessin.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,8): message : voir la déclaration de 'vehicule_calculer_deplacement'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,31): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,43): error C2065: 'vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,51): error C2182: 'vehicule_reset_geometrie' : utilisation non conforme du type 'void'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,38): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,50): error C2065: 'vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,67): error C2062: type 'double' inattendu
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(106,87): error C2065: 'VEHICULE_LARGEUR' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(110,28): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(111,17): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(117,5): error C2064: le terme ne correspond pas à une fonction qui prend 1 arguments
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(123,48): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(123,61): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(124,32): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(126,52): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(128,37): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(128,63): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(128,84): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(146,37): error C2027: utilisation du type non défini 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.cpp(148,31): error C2027: utilisation du type non défini 't_vehicule'
+H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
   mod_geo.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.cpp(40,15): error C2275: 't_polygone' : utilisation non conforme de ce type comme expression
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(10): message : voir la déclaration de 't_polygone'
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.cpp(44,15): error C2275: 't_polygone' : utilisation non conforme de ce type comme expression
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.h(10): message : voir la déclaration de 't_polygone'
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.cpp(50,5): error C2100: indirection non conforme
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.cpp(52,27): error C2100: indirection non conforme
   mod_vehicule.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_geo.cpp(52,27): error C2088: '+=' : non conforme pour struct
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,31): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,43): error C2065: 'vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(4,51): error C2182: 'vehicule_reset_geometrie' : utilisation non conforme du type 'void'
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,38): error C2065: 't_vehicule' : identificateur non déclaré
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,50): error C2065: 'vehicule' : identificateur non déclaré
-  winBGIm.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(12,67): error C2062: type 'double' inattendu
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  mod_voie.cpp
+H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
   Génération de code en cours...
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
