@@ -105,4 +105,4 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance);
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie);
 
-#endif //INF155_20193_TP3_MOD_VOIE_H
+#endif

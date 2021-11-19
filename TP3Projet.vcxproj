@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mod_dessin.cpp" />
     <ClCompile Include="mod_geo.cpp" />
+    <ClCompile Include="mod_route.cpp" />
     <ClCompile Include="mod_vehicule.cpp" />
     <ClCompile Include="mod_voie.cpp" />
     <ClCompile Include="winBGIm.cpp" />
@@ -137,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="mod_dessin.h" />
     <ClInclude Include="mod_geo.h" />
+    <ClInclude Include="mod_route.h" />
     <ClInclude Include="mod_vehicule.h" />
     <ClInclude Include="mod_voie.h" />
     <ClInclude Include="winBGIm.h" />
