@@ -9,7 +9,13 @@
 
 int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts)
 {
-	return 0;
+	for (size_t i = 0; i < nb_pts; i++)
+	{
+		int succes = geo_ajouter_point_polygone(poly, pts[i], i);
+		if (!succes) //Erreur, certains points n'ont pas ete ajoute
+			return 0;
+	}
+	return 1;
 }
 
 void geo_rotation_point(t_point* point, double angle)
@@ -39,4 +45,8 @@ int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position)
 
 void geo_rotation_polygone(t_polygone* poly, double angle)
 {
+	for (size_t i = 0; i < poly->nb_points; i++)
+	{
+		geo_rotation_point(&poly->points[i], angle);
+	}
 }
