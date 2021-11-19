@@ -1,9 +1,6 @@
 
 //travail pour pierre 13/11/2021
 
-
-
-
 void vehicule_reset_geometrie(t_vehicule* vehicule);
 /*Réinitialise le polygone du véhicule dont la référence est passée en
 paramètre.Ensuite, la fonction doit définir les coordonnées des points du
