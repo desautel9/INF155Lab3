@@ -1,12 +1,14 @@
-#ifndef MOD_VEHICULE_H_
-#define MOD_VEHICULE_H_
-
 
 #include "mod_vehicule.h"
 
 
+void vehicule_reset_geometrie(t_vehicule* vehicule) {
 
-//définitions de Pierre ici
+	//TODO: Compléter cette fonction
+}
 
-
-#endif
+double vehicule_calculer_deplacement(t_vehicule* vehicule, double delta_t_sec)
+{
+	//TODO: Compléter cette fonction, la valeur de retournee ici est juste pour la compilation 
+	return 0;
+}
