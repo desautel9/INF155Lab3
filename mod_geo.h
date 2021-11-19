@@ -1,4 +1,12 @@
-﻿#define GEO_POLYGONE_MAX_PTS 10
+﻿#ifndef MOD_GEO_H
+#define MOD_GEO_H
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
+
+#define GEO_POLYGONE_MAX_PTS 4
 
 //Definit un point dans le plan
 typedef struct {
@@ -53,3 +61,5 @@ valeur fausse sinon(position non - valide).*/
 void geo_rotation_polygone(t_polygone* poly, double angle);
 //Reçoit une référence vers un polygone poly et un angle angle.La fonction
 //effectue la rotation du polygone par rapport à l’origine.
+
+#endif
