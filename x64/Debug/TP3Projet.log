@@ -1,15 +1,2 @@
-﻿  mod_dessin.cpp
-  mod_geo.cpp
-  mod_vehicule.cpp
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  mod_voie.cpp
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  winBGIm.cpp
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(25,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  Génération de code en cours...
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  LINK : C:\Users\AR72330\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  TP3Projet.vcxproj -> C:\Users\AR72330\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+﻿  LINK : H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
