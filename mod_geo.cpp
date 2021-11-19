@@ -27,6 +27,11 @@ struct vehicule {
 	//-1 si le véhicule n'est sur aucune voie.
 };
 
+int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts)
+{
+	return 0;
+}
+
 void geo_init_polygone(t_polygone* poly, int taille)
 {
 	if (taille > GEO_POLYGONE_MAX_PTS)
