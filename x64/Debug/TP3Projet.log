@@ -1,0 +1,44 @@
+﻿  main.cpp
+  mod_dessin.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(7,31): error C2065: 't_vehicule' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(7,43): error C2065: 'vehicule' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(7,51): error C2182: 'vehicule_reset_geometrie' : utilisation non conforme du type 'void'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(15,38): error C2065: 't_vehicule' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(15,50): error C2065: 'vehicule' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(15,67): error C2062: type 'double' inattendu
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(106,87): error C2065: 'VEHICULE_LARGEUR' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(110,28): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(111,17): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(117,5): error C2064: le terme ne correspond pas à une fonction qui prend 1 arguments
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(123,48): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(123,61): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(124,32): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(126,52): error C2065: 'LONGUEUR_VOIE_KM' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(128,37): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(128,63): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(128,84): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(146,37): error C2027: utilisation du type non défini 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.cpp(148,31): error C2027: utilisation du type non défini 't_vehicule'
+  mod_geo.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_dessin.h(23): message : voir la déclaration de 't_vehicule'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.cpp(40,15): error C2275: 't_polygone' : utilisation non conforme de ce type comme expression
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.h(10): message : voir la déclaration de 't_polygone'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.cpp(44,15): error C2275: 't_polygone' : utilisation non conforme de ce type comme expression
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.h(10): message : voir la déclaration de 't_polygone'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.cpp(50,5): error C2100: indirection non conforme
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.cpp(52,27): error C2100: indirection non conforme
+  mod_vehicule.cpp
+  winBGIm.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_geo.cpp(52,27): error C2088: '+=' : non conforme pour struct
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  Génération de code en cours...
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
