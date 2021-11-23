@@ -14,9 +14,9 @@
 //La d�claration maximale d'un v�hicule en KM/h.s
 #define VEHICULE_DECEL_MAX 20
 //La longueur en pixels d�un v�hicule � l��cran
-#define VEHICULE_LONGUEUR 10
+#define VEHICULE_LONGUEUR 20
 //La largeur, en pixels, d�un v�hicule � l��cran
-#define VEHICULE_LARGEUR 4
+#define VEHICULE_LARGEUR 8
 
 typedef struct route t_route; //Type-route qui sera d�fini plus tard
 
@@ -44,6 +44,11 @@ void vehicule_liberer(t_vehicule* vehicule);
 void vehicule_free(t_vehicule* vehicule);
 
 void vehicule_reset_geometrie(t_vehicule* vehicule);
+/*Réinitialise le polygone du véhicule dont la référence est passée en
+paramètre.Ensuite, la fonction doit définir les coordonnées des points du
+polygone en se basant sur VEHICULE_LONGUEUR et VEHICULE_LARGEUR.Le premier
+point du polygone doit absolument se trouver aux coordonnées(0, 0).*/
+
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement);
 
