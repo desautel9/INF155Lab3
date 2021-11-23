@@ -30,6 +30,21 @@ typedef struct t_vehicule {
 	//-1 si le véhicule n'est sur aucune voie.
 };
 
+t_vehicule* vehicule_init(void);
+/*Alloue la mémoire pour un véhicule et initialise la géométrie(polygone) du
+véhicule.Le véhicule sera positionné à la position zéro et aura une vitesse
+réelle et une vitesse cible nulles.
+La fonction retourne une référence vers le véhicule créé.
+*/
+
+void vehicule_liberer(t_vehicule* vehicule);
+/*Libère l’espace mémoire d’un véhicule dont la référence est passée en
+paramètre.
+t_voie* voie_init(int max_vehicules, double longeur_km);
+Alloue une voie pouvant accueillir un nombre maximal de véhicules déterminé
+(max_vehicules) et ayant une taille en KM déterminée(longueur_km).
+La fonction retourne une référence vers la voie créée.
+*/
 
 void vehicule_free(t_vehicule* vehicule);
 

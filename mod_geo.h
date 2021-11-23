@@ -59,7 +59,8 @@ valeur fausse sinon(position non - valide).*/
 
 
 void geo_rotation_polygone(t_polygone* poly, double angle);
-//Reçoit une référence vers un polygone poly et un angle angle.La fonction
-//effectue la rotation du polygone par rapport à l’origine.
+/*Reçoit une référence vers un polygone poly et un angle angle.La fonction
+effectue la rotation du polygone par rapport à l’origine.
+*/
 
 #endif
