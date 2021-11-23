@@ -34,6 +34,16 @@ void voie_afficher_console(t_voie* voie)
 {
 }
 
+int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, double distance_min)
+{
+	for (int i = 0; i < voie->nb_vehicules; i++)
+	{
+		if (vehicule->position > voie->vehicules[i]->position)
+			return i;
+	}
+	return -1;
+}
+
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule)
 {
 	return 0;

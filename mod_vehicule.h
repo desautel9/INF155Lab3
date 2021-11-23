@@ -1,4 +1,4 @@
-#ifndef MOD_VEHICULE_H
+ï»¿#ifndef MOD_VEHICULE_H
 #define MOD_VEHICULE_H
 
 #include "mod_dessin.h"
@@ -9,42 +9,37 @@
 #include <string.h>
 #include <stdio.h>
 
-//L'accélération maximale d'un véhicule en KM/h.s 
+//L'accï¿½lï¿½ration maximale d'un vï¿½hicule en KM/h.s 
 #define VEHICULE_ACCEL_MAX 20
-//La déclaration maximale d'un véhicule en KM/h.s
+//La dï¿½claration maximale d'un vï¿½hicule en KM/h.s
 #define VEHICULE_DECEL_MAX 20
-//La longueur en pixels d’un véhicule à l’écran
+//La longueur en pixels dï¿½un vï¿½hicule ï¿½ lï¿½ï¿½cran
 #define VEHICULE_LONGUEUR 10
-//La largeur, en pixels, d’un véhicule à l’écran
+//La largeur, en pixels, dï¿½un vï¿½hicule ï¿½ lï¿½ï¿½cran
 #define VEHICULE_LARGEUR 4
 
-typedef struct route t_route; //Type-route qui sera défini plus tard
+typedef struct route t_route; //Type-route qui sera dï¿½fini plus tard
 
 typedef struct t_vehicule {
 	t_polygone geometrie;
-	double position; //La position actuelle du véhicule sur l'autoroute
-	double vitesse; //La vitesse actuelle du véhicule
-	double vitesse_cible; //La vitesse idéale que souhaite avoir le
-	//conducteur du véhicule
-	int voie; //La voie sur laquelle se trouve le véhicule.
-	//-1 si le véhicule n'est sur aucune voie.
+	double position; //La position actuelle du vï¿½hicule sur l'autoroute
+	double vitesse; //La vitesse actuelle du vï¿½hicule
+	double vitesse_cible; //La vitesse idï¿½ale que souhaite avoir le
+	//conducteur du vï¿½hicule
+	int voie; //La voie sur laquelle se trouve le vï¿½hicule.
+	//-1 si le vï¿½hicule n'est sur aucune voie.
 };
 
 t_vehicule* vehicule_init(void);
-/*Alloue la mémoire pour un véhicule et initialise la géométrie(polygone) du
-véhicule.Le véhicule sera positionné à la position zéro et aura une vitesse
-réelle et une vitesse cible nulles.
-La fonction retourne une référence vers le véhicule créé.
+/*Alloue la mï¿½moire pour un vï¿½hicule et initialise la gï¿½omï¿½trie(polygone) du
+vï¿½hicule.Le vï¿½hicule sera positionnï¿½ ï¿½ la position zï¿½ro et aura une vitesse
+rï¿½elle et une vitesse cible nulles.
+La fonction retourne une rï¿½fï¿½rence vers le vï¿½hicule crï¿½ï¿½.
 */
 
 void vehicule_liberer(t_vehicule* vehicule);
-/*Libère l’espace mémoire d’un véhicule dont la référence est passée en
-paramètre.
-t_voie* voie_init(int max_vehicules, double longeur_km);
-Alloue une voie pouvant accueillir un nombre maximal de véhicules déterminé
-(max_vehicules) et ayant une taille en KM déterminée(longueur_km).
-La fonction retourne une référence vers la voie créée.
-*/
+//LibÃ¨re lâ€™espace mÃ©moire dâ€™un vÃ©hicule dont la rÃ©fÃ©rence est passÃ©e en
+//paramÃ¨tre.
 
 void vehicule_free(t_vehicule* vehicule);
 
