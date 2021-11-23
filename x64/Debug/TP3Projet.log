@@ -1,2 +1,73 @@
-﻿  LINK : H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
+﻿  main.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  mod_dessin.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  mod_geo.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.cpp(23,33): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.cpp(24,33): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+  mod_route.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.h(9,21): error C2371: 't_voie' : redéfinition ; types de base différents
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_voie.h(27): message : voir la déclaration de 't_voie'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.h(10,25): error C2371: 't_vehicule' : redéfinition ; types de base différents
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_voie.h(25): message : voir la déclaration de 't_vehicule'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.cpp(46,15): error C3863: le type de tableau 't_voie *[10]' n'est pas attribuable
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.cpp(57,22): error C2059: erreur de syntaxe : ';'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.cpp(57,27): error C2059: erreur de syntaxe : ')'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.cpp(57,25): error C2064: le terme ne correspond pas à une fonction qui prend 1 arguments
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_route.cpp(62,2): error C2143: erreur de syntaxe : absence de ';' avant 'return'
+  mod_vehicule.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(16,42): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(16,42): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(16,53): error C2232: '->t_polygone::nb_points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(18,22): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(18,22): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(18,30): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(19,22): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(19,22): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(19,30): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(23,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(23,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(23,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(24,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(24,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(24,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(26,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(26,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(26,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(27,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(27,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(27,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(29,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(29,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(29,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(30,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(30,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(30,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(32,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(32,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(32,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(33,21): error C2819: le type 't_polygone' n'a pas d'opérateur 'operator ->' de membre surchargé
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_geo.h(18): message : voir la déclaration de 't_polygone'
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(33,21): message : voulez-vous utiliser '.' à la place ?
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp(33,29): error C2232: '->t_polygone::points' : opérande gauche avec type 'struct', utilisez '.'
+  mod_voie.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  winBGIm.cpp
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  Génération de code en cours...
