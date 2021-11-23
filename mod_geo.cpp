@@ -29,6 +29,11 @@ void geo_init_polygone(t_polygone* poly, int taille)
 	if (taille > GEO_POLYGONE_MAX_PTS)
 		taille = 0;
 
+	for (size_t i = 0; i < taille; i++)
+	{
+		poly->points[i].x = 0;
+		poly->points[i].y = 0;
+	}
 
 	poly->nb_points = taille;
 }
