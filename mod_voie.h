@@ -105,4 +105,13 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance);
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie);
 
+int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule,
+	int indice, double distance_min);
+/*Fonction privée du module qui détermine s’il est possible d’insérer le
+véhicule « vehicule » sur la voie « voie » à la position « indice » du
+tableau, en préservant une distance minimale « distance_min » entre le
+véhicule précédent et le véhicule suivant.
+La fonction reto
+pierre
+*/
 #endif

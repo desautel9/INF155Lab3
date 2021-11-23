@@ -25,7 +25,7 @@ t_vehicule* vehicule_init(void);
 //réelle et une vitesse cible nulles.
 //La fonction retourne une référence vers le véhicule créé.
 
-void vehicule_liberer(t_vehicule* vehicule);
+void vehicule_liberer(t_vehicule* vehicule);//pierre
 //Libère l’espace mémoire d’un véhicule dont la référence est passée en
 //paramètre.
 //t_voie* voie_init(int max_vehicules, double longeur_km);

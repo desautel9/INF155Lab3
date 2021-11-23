@@ -4,6 +4,10 @@
 #include "mod_dessin.h"
 #include "mod_geo.h"
 #include "mod_voie.h"
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 //L'accélération maximale d'un véhicule en KM/h.s 
 #define VEHICULE_ACCEL_MAX 20
