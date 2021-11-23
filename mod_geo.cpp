@@ -31,8 +31,10 @@ void geo_init_polygone(t_polygone* poly, int taille)
 
 	for (size_t i = 0; i < taille; i++)
 	{
-		poly->points[i].x = 0;
-		poly->points[i].y = 0;
+		t_point point;
+		point.x = 0;
+		point.y = 0;
+		geo_ajouter_point_polygone(poly, point, i);
 	}
 
 	poly->nb_points = taille;
