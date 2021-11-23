@@ -7,7 +7,7 @@
 #include "winBGIm.h"
 #include <time.h>
 
-#define NB_VOIES 6
+#define NB_VOIES 5
 #define NB_VEHICULES 200
 #define FACILITER_DEPASSEMENTS 1
 
@@ -30,6 +30,7 @@ int main(void)
 	v.position = 0;
 	v.vitesse = 100;
 	v.vitesse_cible = 120;
+	v.voie = 0;
 
 	do {
 		cleardevice();
