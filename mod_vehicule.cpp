@@ -29,12 +29,16 @@ void vehicule_free(t_vehicule* vehicule)
 
 void vehicule_reset_geometrie(t_vehicule* vehicule)
 {
+	int nombre_points = vehicule->geometrie.nb_points; //test 
 	for (int i = 0; i <= vehicule->geometrie.nb_points; i++)
 	{
 		vehicule->geometrie.points[i].x = 0;
 		vehicule->geometrie.points[i].y = 0;
 
 	}
+
+	vehicule->geometrie.nb_points = nombre_points;//test
+
 
 	vehicule->geometrie.points[0].x = 0;
 	vehicule->geometrie.points[0].y = 0;
@@ -47,8 +51,6 @@ void vehicule_reset_geometrie(t_vehicule* vehicule)
 
 	vehicule->geometrie.points[3].x = VEHICULE_LONGUEUR;
 	vehicule->geometrie.points[3].y = VEHICULE_LARGEUR;
-
-
 }
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement)
