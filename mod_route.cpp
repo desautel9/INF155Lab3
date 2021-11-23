@@ -54,5 +54,10 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 	route->vitesse_min = vitesse_min;
 	route->vitesse_max = vitesse_max;
 
+	for (int i = 0; i < ; i++)
+	{
+		route
+	}
+
 	return route;
 }
