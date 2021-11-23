@@ -6,10 +6,6 @@
 #define ROUTE_MAX_VOIES 10
 #define DELTA_T_INTERATIONS_SECS 1.5 //Temps entre chaque boucle de simulation
 
-typedef struct voie t_voie; //R�p�tition du type pour la compilation
-typedef struct vehicule t_vehicule; //R�p�tition du type pour la compilation
-typedef struct route t_route;
-
 //D�finit le type struct route qui encapsule les voies
 struct route {
 	t_voie* voies[ROUTE_MAX_VOIES]; //Tableau statique de r�f�rences vers des voies

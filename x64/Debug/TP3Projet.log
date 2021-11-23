@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  main.cpp
 C:\Users\AR68800\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
   mod_dessin.cpp
@@ -71,3 +72,6 @@ C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning
 C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
 C:\Users\AR68800\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
   Génération de code en cours...
+=======
+﻿  TP3Projet.vcxproj -> C:\Users\David Hill\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+>>>>>>> fca301ddc7863dbe8c17d202f162779224893177
