@@ -85,6 +85,51 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule);
  * la voie passée en paramètre. Le véhicule peut changer de voie si il n'y a
  * aucun autre véhicule sur la nouvelle voie à moins de
  */
+
+void voie_liberer(t_voie* voie);
+//Libère l’espace occupé par une voie.La fonction doit notamment libérer
+//l’espace mémoire occupé par tous ses véhicules.
+//t_route* route_init(int nb_voies, double vitesse_min,
+//	double vitesse_max, double longueur_visible,
+//	int max_vehicules_voie);
+//Alloue l’espace mémoire pour une route et initialise ses champs aux valeurs
+//des paramètres transmis.La fonction doit remplir le tableau de références
+//vers des voies en créant de nouvelles voies.
+//La fonction retourne la référence vers la route créée.
+
+int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, double distance_min);
+//Fonction privée du module qui détermine à quel indice le véhicule
+//« vehicule » devrait être inséré dans le tableau de véhicules de la voie
+//« voie », de sorte que l’on préserve l’ordre croissant des véhicules dans le
+//tableau(par leur position). (MAJ : Cette fonction ne doit plus être privée)
+//La fonction retourne l’indice de la position identifiée s’il est possible
+//d’insérer le véhicule dans la voie, ou la valeur - 1 sinon.Vous devez vous
+//assurer que la voie n’est pas déjà pleine(auquel cas retourner - 1).
+
+int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_min);
+//Ajoute le véhicule « vehicule » à la voie « voie ».Le véhicule doit être
+//ajouté uniquement si c’est possible.Notamment, le véhicule ne peut pas être
+//ajouté si, en l’ajoutant, il se trouverait à moins que « distance_min » du
+//véhicule suivant ou précédent.Les fonctions privées précédentes devraient
+//être utiles à cette fonction.
+//La fonction retourne une valeur vraie si le véhicule a bien été ajouté, ou
+//une valeur fausse sinon.
+
+int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
+//Fonction privée du module qui détermine si le véhicule « vehicule » se
+//trouve sur la voie « voie ».Si le véhicule s’y trouve, son indice dans le
+//tableau de véhicules de la voie est retourné.Sinon, la fonction retourne la
+//valeur - 1.
+
+int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule);
+//Supprime le véhicule « vehicule » de la liste des véhicules se trouvant sur
+//la voie « voie »(s’il s’y trouve) et met à jour le nombre de véhicules de
+//la voie.
+//Notez que le tableau de véhicules doit être maintenu en ordre croissant de
+//véhicules et ne doit pas contenir de trous !
+//La fonction retourne une valeur vraie si le véhicule a bien supprimé, ou une
+//valeur fausse sinon.
+
 int voie_changement_voie_possible(const t_voie* nouvelle_voie, const t_vehicule* vehicule);
 
 void voie_afficher_console(t_voie* voie);
