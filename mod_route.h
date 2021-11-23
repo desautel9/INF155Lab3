@@ -12,8 +12,7 @@ typedef struct route t_route;
 
 //Définit le type struct route qui encapsule les voies
 struct route {
-	t_voie* voies[ROUTE_MAX_VOIES]; //Tableau statique de références vers
-	//des voies
+	t_voie* voies[ROUTE_MAX_VOIES]; //Tableau statique de références vers des voies
 	int nb_voies; //Le nombre de voies dans le tableau de voies
 	double vitesse_max; //La vitesse maximale autorisée sur la route
 	double vitesse_min; //La vitesse minimale autorisée sur la route
@@ -89,5 +88,14 @@ int voie_retirer_vehicule(t_voie * voie, const t_vehicule * vehicule);
 //véhicules et ne doit pas contenir de trous !
 //La fonction retourne une valeur vraie si le véhicule a bien supprimé, ou une
 //valeur fausse sinon.
+
+t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double longueur_visible, int max_vehicules_voie);
+//Alloue l’espace mémoire pour une route et initialise ses champs aux valeurs
+//des paramètres transmis.La fonction doit remplir le tableau de références
+//vers des voies en créant de nouvelles voies.
+//La fonction retourne la référence vers la route créée.Alloue l’espace mémoire pour une route et initialise ses champs aux valeurs
+//des paramètres transmis.La fonction doit remplir le tableau de références
+//vers des voies en créant de nouvelles voies.
+//La fonction retourne la référence vers la route créée.
 
 #endif

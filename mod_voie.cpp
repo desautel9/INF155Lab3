@@ -1,5 +1,30 @@
 #include "mod_voie.h"
 
+t_voie* voie_init(int max_vehicules, double longeur_km)
+{
+	t_voie* voie;
+
+	//Allouer la mémoire de facon dynamique a une voie
+	voie = (t_voie*)malloc(sizeof(t_voie));
+
+	if (voie == NULL) //Toujours vérifier si l'allocation a fonctionné
+	{
+		printf("Erreur d'allocation memoire!\n");
+		exit(EXIT_FAILURE);
+	}
+
+	voie->max_vehicules = max_vehicules;
+	voie->longueur_km = longeur_km;
+
+	return voie;
+}
+
+void voie_free(t_voie* voie)
+{
+	free(voie->vehicules);
+	free(voie);
+}
+
 int voie_changement_voie_possible(const t_voie* nouvelle_voie, const t_vehicule* vehicule)
 {
 	return 0;
