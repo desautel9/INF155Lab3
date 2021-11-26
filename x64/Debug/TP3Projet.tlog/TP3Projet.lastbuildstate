@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v142:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0
-Debug|x64|C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\|
+<<<<<<< HEAD
+Debug|x64|C:\Users\AR72330\Source\Repos\desautel9\INF155Lab3\|
+=======
+Debug|x64|H:\INF155\TP3\v1\INF155Lab3\|
+>>>>>>> 89d091f6b7ed632af0d7022b6a76aaa58e6effb3
