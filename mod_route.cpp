@@ -22,11 +22,11 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 	}
 
 	//route->voies = (t_voie**)malloc(sizeof(t_voie*) * ROUTE_MAX_VOIES); //Alloue un emplacement pour un tableau de t_voie
-	if (route->voies == NULL)
-	{
-		printf("Erreur d'allocation!\n");
-		exit(EXIT_FAILURE);
-	}
+	//if (route->voies == NULL)
+	//{
+	//	printf("Erreur d'allocation!\n");
+	//	exit(EXIT_FAILURE);
+	//}
 
 	route->nb_voies = nb_voies;
 	route->vitesse_min = vitesse_min;
@@ -35,7 +35,7 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 	for (int i = 0; i < nb_voies; i++)
 	{
 		t_voie* voies = voie_init(longueur_visible, max_vehicules_voie);
-		//route->voies = voies;
+		route->voies[i] = voies;
 	}
 
 	return route;
