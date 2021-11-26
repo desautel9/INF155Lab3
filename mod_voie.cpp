@@ -90,12 +90,12 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
 
-double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
@@ -128,7 +128,7 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
 
-
+	if()
 
 
 
