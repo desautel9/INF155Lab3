@@ -55,8 +55,8 @@ int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvel
 
 double vehicule_calculer_deplacement(t_vehicule* vehicule, double delta_t_sec)
 {
-	double nouvelle_position = (vehicule->vitesse * delta_t_sec); //calcul variation position
+	double variation_position = ((vehicule->vitesse/3600) * delta_t_sec); //calcul variation position
 
 
-	return nouvelle_position;
+	return variation_position;
 }

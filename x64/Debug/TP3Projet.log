@@ -1,10 +1,13 @@
-﻿  mod_voie.cpp
+﻿  mod_route.cpp
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+  mod_vehicule.cpp
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_route.cpp(37,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
   winBGIm.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
   Génération de code en cours...
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\mod_voie.cpp(91): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  LINK : C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  TP3Projet.vcxproj -> C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
