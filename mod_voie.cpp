@@ -88,6 +88,20 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
+{
+	double distance= voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;
+
+	if (distance < 0.0 )
+	{
+		distance = distance + LONGUEUR_VOIE_KM;
+		return distance;
+	}
+
+	
+	return distance;
+}
+
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
@@ -102,7 +116,7 @@ double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
 {
 	double vitesse=0;
 
-
+	
 
 	return vitesse;
 }
@@ -129,6 +143,8 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
+	
+
 	//si aucune position disponible ou nb_max de vehicule atteint
 	if (indice == -1 || voie->nb_vehicules + 1 > MAX_VEHICULES_PAR_VOIE)
 		return 0;
