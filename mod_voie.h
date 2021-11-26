@@ -8,27 +8,27 @@
 #include <math.h>
 #include "mod_vehicule.h"
 
-//Taille de la voie
-#define LONGUEUR_VOIE_KM 5.0
-//Nombre maximal de vehicules sur une seule voie
+//Taille des voies la voie à l’écran en KM (i.e. circonférence du cercle)
+#define LONGUEUR_VOIE_KM 10.0
+//Nombre maximal de véhicules sur une seule voie
 #define MAX_VEHICULES_PAR_VOIE 300
 //Distance minimale (en KM) entre les véhicules
 #define DISTANCE_MIN_ENTRE_VEHICULES 0.025
-//Distance minimale (en KM) entre les véhicules qui nécessite un freinage d'urgence
+//Distance minimale (en KM) entre 2 véhicules qui nécessite un freinage d’urgence
 #define DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE 2*DISTANCE_MIN_ENTRE_VEHICULES
 //Distance minimale (en KM) entre les véhicules lors d'un dépassement
 #define DISTANCE_MIN_ENTRE_VEHICULES_DEPASSEMENT 4*DISTANCE_MIN_ENTRE_VEHICULES
 //Code d'erreur retourné si un véhicule est introuvable dans la voie
 #define ERREUR_VEHICULE_INTROUVABLE -1
-
-typedef struct t_voie t_voie;
-typedef struct t_vehicule t_vehicule;
-
-struct t_voie {
-	t_vehicule** vehicules; //Tableau dynamique ORDONNÉ de références vers des véhicules
-	int nb_vehicules; //Nombre effectif de vehicules se trouvant dans la voie
-	int max_vehicules;  //Nombre maximal de vehicules qu'on peut ajouter à la voie.
-	double longueur_km; //Taille (en KM) de la voie à l'écran.
+typedef struct vehicule t_vehicule; //Répétition du type pour la compilation
+typedef struct voie t_voie;
+//Définit le type struct voie qui encapsule les véhicules qui y circulent
+struct voie {
+	t_vehicule** vehicules; //Tableau dynamique ORDONNÉ de références vers
+	//des véhicules (ordonné par position sur la voie)
+	int nb_vehicules; //Nombre effectif de véhicules se trouvant dans la voie
+	int max_vehicules; //Nombre max. de véhicules qu'on peut ajouter à la voie
+	double longueur_km; //Taille (en KM) de la voie à l'écran
 };
 
 t_voie* voie_init(int max_vehicules, double longeur_km);
@@ -141,7 +141,7 @@ void voie_afficher_console(t_voie* voie);
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
 
-double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre fait
 /*Fonction privée du module « mod_voie » qui calcule la distance entre deux
 véhicules se trouvant sur la voie « voie ».Le premier véhicule se trouve à
 la position « pos1 » du tableau de véhicules de la voie et le second se

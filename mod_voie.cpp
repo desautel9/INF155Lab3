@@ -28,15 +28,7 @@ void voie_free(t_voie* voie)
 int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_min)
 {
 	int indice = voie_position_insertion(voie, vehicule, distance_min);
-
-	//si aucune position disponible ou nb_max de vehicule atteint
-	if (indice == -1 || voie->nb_vehicules+1 > MAX_VEHICULES_PAR_VOIE) 
-		return 0;
-
-	//Condition qui verifie si le vehicule respecte la distance minimum
-	int distance_devant_ok = (voie->vehicules[indice]->position + distance_min) < voie->vehicules[indice + 1]->position;
-	int distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) > (voie->vehicules[indice - 1]->position);
-	if (distance_devant_ok && distance_arriere_ok)
+	if (voie_insertion_valide(voie, vehicule, indice, distance_min))
 	{
 		for (size_t i = voie->nb_vehicules-1; i > indice; i--)
 		{
@@ -96,17 +88,48 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
+{
+	double distance= voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;
+
+	if (distance < 0.0 )
+	{
+		distance = distance + LONGUEUR_VOIE_KM;
+		return distance;
+	}
+
+	
+	return distance;
+}
+
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
-	return 0.0;
+	int pos1, pos2;
+
+	if (voie->nb_vehicules <= 1) // si un seul vehicule sur la voie 
+	{
+		return -1;
+	}
+
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == voie->nb_vehicules-1)
+	{
+		 pos1 = indice;
+		 pos2 = 0;
+	}
+	else
+	{
+		 pos1 = indice;
+		 pos2 = indice+1;
+	}
+	
+	 
+
+
+	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
 double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
-{
-	return 0.0;
-}
-
-double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule) //David
 {
 	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
 	{
@@ -157,12 +180,17 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
+	
 
-	if()
+	//si aucune position disponible ou nb_max de vehicule atteint
+	if (indice == -1 || voie->nb_vehicules + 1 > MAX_VEHICULES_PAR_VOIE)
+		return 0;
 
-
-
-
-
-	return 0;
+	//Condition qui verifie si le vehicule respecte la distance minimum
+	int distance_devant_ok = (voie->vehicules[indice]->position + distance_min) < voie->vehicules[indice + 1]->position;
+	int distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) > (voie->vehicules[indice - 1]->position);
+	if (distance_devant_ok && distance_arriere_ok)
+		return 1;
+	else
+		return 0;
 }

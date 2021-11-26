@@ -1,6 +1,5 @@
 #include "mod_route.h"
 
-
 void vehicule_liberer(t_vehicule* vehicule)
 {
 	//Important: libérer la mémoire allouée dynamiquement quand on l'utilise plus
@@ -20,13 +19,6 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 		printf("Erreur d'allocation memoire!\n");
 		exit(EXIT_FAILURE);
 	}
-
-	//route->voies = (t_voie**)malloc(sizeof(t_voie*) * ROUTE_MAX_VOIES); //Alloue un emplacement pour un tableau de t_voie
-	//if (route->voies == NULL)
-	//{
-	//	printf("Erreur d'allocation!\n");
-	//	exit(EXIT_FAILURE);
-	//}
 
 	route->nb_voies = nb_voies;
 	route->vitesse_min = vitesse_min;
