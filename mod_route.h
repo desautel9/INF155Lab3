@@ -1,38 +1,23 @@
-﻿#ifndef MOD_ROUTE_H
-#define MOD_ROUTE_H
-
+﻿#include <stdio.h>
 #include "mod_voie.h"
+
+#ifndef MOD_ROUTE_H
+#define MOD_ROUTE_H
 
 #define ROUTE_MAX_VOIES 10
 #define DELTA_T_INTERATIONS_SECS 1.5 //Temps entre chaque boucle de simulation
-
-//D�finit le type struct route qui encapsule les voies
+typedef struct voie t_voie; //Répétition du type pour la compilation
+typedef struct vehicule t_vehicule; //Répétition du type pour la compilation
+typedef struct route t_route;
+//Définit le type struct route qui encapsule les voies
 struct route {
-	t_voie* voies[ROUTE_MAX_VOIES]; //Tableau statique de r�f�rences vers des voies
+	t_voie* voies[ROUTE_MAX_VOIES]; //Tableau statique de références vers
+	//des voies
 	int nb_voies; //Le nombre de voies dans le tableau de voies
-	double vitesse_max; //La vitesse maximale autoris�e sur la route
-	double vitesse_min; //La vitesse minimale autoris�e sur la route
+	double vitesse_max; //La vitesse maximale autorisée sur la route
+	double vitesse_min; //La vitesse minimale autorisée sur la route
 };
 
-
-void vehicule_liberer(t_vehicule* vehicule);//pierre
-//Libère l’espace mémoire d’un véhicule dont la référence est passée en
-//paramètre.
-//t_voie* voie_init(int max_vehicules, double longeur_km);
-//Alloue une voie pouvant accueillir un nombre maximal de véhicules déterminé
-//(max_vehicules) et ayant une taille en KM déterminée(longueur_km).
-//La fonction retourne une référence vers la voie créée.
-
-void voie_liberer(t_voie* voie);
-//Libère l’espace occupé par une voie.La fonction doit notamment libérer
-//l’espace mémoire occupé par tous ses véhicules.
-//t_route* route_init(int nb_voies, double vitesse_min,
-//	double vitesse_max, double longueur_visible,
-//	int max_vehicules_voie);
-//Alloue l’espace mémoire pour une route et initialise ses champs aux valeurs
-//des paramètres transmis.La fonction doit remplir le tableau de références
-//vers des voies en créant de nouvelles voies.
-//La fonction retourne la référence vers la route créée.
 
 void route_liberer(t_route* route);
 /*Lib�re tout l�espace m�moire occup� par la route dont la r�f�rence est

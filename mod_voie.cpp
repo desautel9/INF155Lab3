@@ -100,12 +100,8 @@ double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicu
 
 double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule) //David
 {
-	double vitesse;
+	double vitesse=0;
 
-	if ()
-	{
-
-	}
 
 
 	return vitesse;
@@ -133,8 +129,6 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
-	int indice = voie_position_insertion(voie, vehicule, distance_min);
-
 	//si aucune position disponible ou nb_max de vehicule atteint
 	if (indice == -1 || voie->nb_vehicules + 1 > MAX_VEHICULES_PAR_VOIE)
 		return 0;
