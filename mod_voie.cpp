@@ -88,7 +88,7 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
-double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)//pierre fait
 {
 	double distance= voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;
 
@@ -102,7 +102,7 @@ double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
 	return distance;
 }
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre fait
 {
 	int pos1, pos2;
 
@@ -112,7 +112,7 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 	}
 
 	int indice = voie_trouver_vehicule(voie, vehicule);
-	if (indice == voie->nb_vehicules-1)
+	if (indice == voie->nb_vehicules-1)// vehicule en derniere position
 	{
 		 pos1 = indice;
 		 pos2 = 0;
@@ -126,7 +126,7 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 	 
 
 
-	return calculer_distance_vehicules(voie, pos1, pos2);
+	return calculer_distance_vehicules(voie, pos1, pos2);//pierre fait
 }
 
 double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
@@ -139,7 +139,7 @@ double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicu
 	}
 
 	int indice = voie_trouver_vehicule(voie, vehicule);
-	if (indice == 0)
+	if (indice == 0)// vehicule en premiere position
 	{
 		pos1 = indice;
 		pos2 = voie->nb_vehicules - 1;
