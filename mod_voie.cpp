@@ -25,6 +25,26 @@ void voie_free(t_voie* voie)
 	free(voie);
 }
 
+int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_min)
+{
+	int indice = voie_position_insertion(voie, vehicule, distance_min);
+
+	if (indice == -1) //si aucune position disponible
+		return 0;
+
+	//Condition qui verifie si le vehicule respecte la distance minimum
+	else if ((voie->vehicules[indice]->position + distance_min) нннн< voie->vehicules[indice + 1]->position &&
+			 (voie->vehicules[indice]->position - distance_min) > voie->vehicules[indice - 1]->position)
+	{
+		voie->vehicules[indice] = vehicule;
+		voie->nb_vehicules++;
+		return 1;
+	}
+
+	else
+		return 0;
+}
+
 int voie_changement_voie_possible(const t_voie* nouvelle_voie, const t_vehicule* vehicule)
 {
 	return 0;
@@ -39,14 +59,34 @@ int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, doub
 	for (int i = 0; i < voie->nb_vehicules; i++)
 	{
 		if (vehicule->position > voie->vehicules[i]->position)
-			return i;
+			return i+1;
 	}
 	return -1;
 }
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule)
 {
-	return 0;
+	for (int i = 0; i < voie->nb_vehicules; i++)
+	{
+		if (voie->vehicules[i] == vehicule)
+			return i;
+	}
+	return -1;
+}
+
+int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
+{
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	
+	if (indice == -1) //vehicule invalide
+		return -1;
+
+	voie->nb_vehicules--;
+	for (size_t i = indice; i < voie->nb_vehicules; i++)
+	{
+		voie->vehicules[i] = voie->vehicules[i+1];
+	}
+	
 }
 
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)
@@ -78,6 +118,11 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 }
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
+{
+	return 0;
+}
+
+int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
 	return 0;
 }
