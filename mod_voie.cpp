@@ -129,7 +129,7 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
-double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
+double voie_vitesse_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
 {
 	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
 	{
