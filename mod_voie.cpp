@@ -88,6 +88,20 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
+{
+	double distance= voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;
+
+	if (distance < 0.0 )
+	{
+		distance = distance + LONGUEUR_VOIE_KM;
+		return distance;
+	}
+
+	
+	return distance;
+}
+
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;

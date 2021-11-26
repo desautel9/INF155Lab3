@@ -141,7 +141,7 @@ void voie_afficher_console(t_voie* voie);
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
 
-double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre fait
 /*Fonction privée du module « mod_voie » qui calcule la distance entre deux
 véhicules se trouvant sur la voie « voie ».Le premier véhicule se trouve à
 la position « pos1 » du tableau de véhicules de la voie et le second se
