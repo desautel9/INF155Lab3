@@ -5,6 +5,7 @@
 #include "mod_dessin.h"
 #include "mod_vehicule.h"
 #include "winBGIm.h"
+#include "mod_route.h"
 #include <time.h>
 
 #define NB_VOIES 5
@@ -14,13 +15,13 @@
 #define DELAI_ITERATIONS_MS 0
 
 int main(void)
-{
-	t_vehicule v;
-
+{	
 	initwindow(800, 800);
 	settextjustify(CENTER_TEXT, CENTER_TEXT);
 	settextstyle(DEFAULT_FONT, HORIZ_DIR, 2);
+	t_route route;
 
+	t_vehicule v;
 	geo_init_polygone(&(v.geometrie), 4);
 	vehicule_reset_geometrie(&v);
 	v.position = 0;

@@ -4,32 +4,32 @@
 #include "mod_dessin.h"
 #include "mod_geo.h"
 #include "mod_voie.h"
+#include "mod_route.h"
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-//L'acc�l�ration maximale d'un v�hicule en KM/h.s 
+//L'accélération maximale d'un véhicule en KM/h.s
 #define VEHICULE_ACCEL_MAX 20
-//La d�claration maximale d'un v�hicule en KM/h.s
+//La déclaration maximale d'un véhicule en KM/h.s
 #define VEHICULE_DECEL_MAX 20
-//La longueur en pixels d�un v�hicule � l��cran
-#define VEHICULE_LONGUEUR 20
-//La largeur, en pixels, d�un v�hicule � l��cran
-#define VEHICULE_LARGEUR 8
-
-typedef struct route t_route; //Type-route qui sera d�fini plus tard
-
-typedef struct t_vehicule {
+//La longueur en pixels d’un véhicule à l’écran
+#define VEHICULE_LONGUEUR 10
+//La largeur, en pixels, d’un véhicule à l’écran
+#define VEHICULE_LARGEUR 4
+typedef struct route t_route; //Type-route qui sera défini plus tard
+typedef struct vehicule t_vehicule;
+//Définit le type struct vehicule
+struct t_vehicule {
 	t_polygone geometrie;
-	double position; //La position actuelle du v�hicule sur l'autoroute
-	double vitesse; //La vitesse actuelle du v�hicule
-	double vitesse_cible; //La vitesse id�ale que souhaite avoir le
-	//conducteur du v�hicule
-	int voie; //La voie sur laquelle se trouve le v�hicule.
-	//-1 si le v�hicule n'est sur aucune voie.
+	double position; //La position actuelle du véhicule sur l'autoroute
+	double vitesse; //La vitesse actuelle du véhicule
+	double vitesse_cible; //La vitesse idéale que souhaite avoir le
+	//conducteur du véhicule
+	int voie; //La voie sur laquelle se trouve le véhicule.
+	//-1 si le véhicule n'est sur aucune voie.
 };
-
 t_vehicule* vehicule_init(void);
 /*Alloue la m�moire pour un v�hicule et initialise la g�om�trie(polygone) du
 v�hicule.Le v�hicule sera positionn� � la position z�ro et aura une vitesse
@@ -40,8 +40,6 @@ La fonction retourne une r�f�rence vers le v�hicule cr��.
 void vehicule_liberer(t_vehicule* vehicule);
 //Libère l’espace mémoire d’un véhicule dont la référence est passée en
 //paramètre.
-
-void vehicule_free(t_vehicule* vehicule);
 
 void vehicule_reset_geometrie(t_vehicule* vehicule);
 /*Réinitialise le polygone du véhicule dont la référence est passée en
