@@ -20,8 +20,11 @@ int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts)
 
 void geo_rotation_point(t_point* point, double angle)
 {
-	point->x = point->x*cos(angle) - point->y*sin(angle);
-	point->y = point->x*sin(angle) + point->y*cos(angle);
+	int x;
+
+	x = point->x * cos(angle) - point->y * sin(angle);
+	point->y = point->x * sin(angle) + point->y * cos(angle);
+	point->x = x;
 }
 
 void geo_init_polygone(t_polygone* poly, int taille)

@@ -129,8 +129,16 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 	return 0;
 }
 
-int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule,
-	int indice, double distance_min)
+
+
+int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
+
+
+
+
+
+
+
 	return 0;
 }
