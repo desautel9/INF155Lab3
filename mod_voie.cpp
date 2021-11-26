@@ -33,8 +33,8 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 		return 0;
 
 	//Condition qui verifie si le vehicule respecte la distance minimum
-	else if ((voie->vehicules[indice]->position + distance_min) нннн< voie->vehicules[indice + 1]->position &&
-			 (voie->vehicules[indice]->position - distance_min) > voie->vehicules[indice - 1]->position)
+	if (((voie->vehicules[indice]->position + distance_min) нннн< voie->vehicules[indice + 1]->position) && 
+		((voie->vehicules[indice]->position - distance_min) > voie->vehicules[indice - 1]->position)) 
 	{
 		voie->vehicules[indice] = vehicule;
 		voie->nb_vehicules++;
