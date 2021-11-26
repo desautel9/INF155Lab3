@@ -13,10 +13,6 @@
 
 #define DELAI_ITERATIONS_MS 0
 
-
-//Main de test à la fin de la semaine 1. En exécutant ce main, vous devez 
-//avoir un véhicule jaune qui tourne sur la voie 0 (la voie extérieure).
-//Pour que ça marche, vous devez implémenter toutes les fonctions de la semaine 1.
 int main(void)
 {
 	t_vehicule v;
