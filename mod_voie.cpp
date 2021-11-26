@@ -108,20 +108,36 @@ double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicu
 
 double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule) //David
 {
-	double vitesse;
-
-	if ()
+	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
 	{
-
+		return -1;
 	}
 
-
-	return vitesse;
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == 0) //Si le véhicule se trouve a l'emplacement 0, on doit 
+	{
+		int indice_precedent = voie->nb_vehicules - 1;
+		t_vehicule* vehicule_precedent = voie->vehicules[indice_precedent];
+		double vitesse_cible = vehicule_precedent->vitesse_cible;
+		return vitesse_cible;
+	}
 }
 
 double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule) //David
 {
-	return 0.0;
+	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
+	{
+		return -1;
+	}
+
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == voie->nb_vehicules-1) //Si le véhicule se trouve a l'emplacement 0, on doit 
+	{
+		int indice_suivant = voie->nb_vehicules +1;
+		t_vehicule* vehicule_suivant = voie->vehicules[indice_suivant];
+		double vitesse_cible = vehicule_suivant->vitesse_cible;
+		return vitesse_cible;
+	}
 }
 
 void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance) //David
