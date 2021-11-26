@@ -18,8 +18,8 @@
 #define VEHICULE_LONGUEUR 10
 //La largeur, en pixels, d’un véhicule à l’écran
 #define VEHICULE_LARGEUR 4
-typedef struct route t_route; //Type-route qui sera défini plus tard
-typedef struct vehicule t_vehicule;
+typedef struct t_route t_route; //Type-route qui sera défini plus tard
+typedef struct t_vehicule t_vehicule;
 //Définit le type struct vehicule
 struct t_vehicule {
 	t_polygone geometrie;

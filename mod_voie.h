@@ -20,10 +20,10 @@
 #define DISTANCE_MIN_ENTRE_VEHICULES_DEPASSEMENT 4*DISTANCE_MIN_ENTRE_VEHICULES
 //Code d'erreur retourné si un véhicule est introuvable dans la voie
 #define ERREUR_VEHICULE_INTROUVABLE -1
-typedef struct vehicule t_vehicule; //Répétition du type pour la compilation
-typedef struct voie t_voie;
+typedef struct t_vehicule t_vehicule; //Répétition du type pour la compilation
+typedef struct t_voie t_voie;
 //Définit le type struct voie qui encapsule les véhicules qui y circulent
-struct voie {
+struct t_voie {
 	t_vehicule** vehicules; //Tableau dynamique ORDONNÉ de références vers
 	//des véhicules (ordonné par position sur la voie)
 	int nb_vehicules; //Nombre effectif de véhicules se trouvant dans la voie
