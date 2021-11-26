@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+﻿  TP3Projet.vcxproj -> C:\Users\AR72330\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+=======
 ﻿  mod_geo.cpp
 C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
 C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(25,28): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
 C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(26,35): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
 C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(40,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
   TP3Projet.vcxproj -> C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+>>>>>>> e98f6640429689de9d89bf38584fd5d20315bd8a
