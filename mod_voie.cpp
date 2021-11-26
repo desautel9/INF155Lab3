@@ -33,8 +33,9 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 		return 0;
 
 	//Condition qui verifie si le vehicule respecte la distance minimum
-	else if ((voie->vehicules[indice]->position + distance_min) нннн< voie->vehicules[indice + 1]->position &&
-			 (voie->vehicules[indice]->position - distance_min) > voie->vehicules[indice - 1]->position)
+	int distance_devant_ok = (voie->vehicules[indice]->position + distance_min) < voie->vehicules[indice + 1]->position;
+	int distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) > (voie->vehicules[indice - 1]->position);
+	if (distance_devant_ok && distance_arriere_ok)
 	{
 		voie->vehicules[indice] = vehicule;
 		voie->nb_vehicules++;
@@ -122,7 +123,16 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 	return 0;
 }
 
+
+
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
+
+
+
+
+
+
+
 	return 0;
 }
