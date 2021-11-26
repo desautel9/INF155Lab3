@@ -1,23 +1,6 @@
-﻿  mod_voie.cpp
-<<<<<<< HEAD
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(36,62): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '­­­­'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(36,62): error C2065: '­­­­' : identificateur non déclaré
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(37,95): error C2059: erreur de syntaxe : ')'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(39,37): error C2059: erreur de syntaxe : ';'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(44,2): error C2059: erreur de syntaxe : 'else'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(46,1): error C2059: erreur de syntaxe : '}'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(46,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(49,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
-C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(49,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
-=======
-  winBGIm.cpp
-H:\INF155\TP3\v1\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  Génération de code en cours...
-H:\INF155\TP3\v1\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-H:\INF155\TP3\v1\INF155Lab3\mod_voie.cpp(91): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
->>>>>>> 89d091f6b7ed632af0d7022b6a76aaa58e6effb3
+﻿  mod_geo.cpp
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(25,28): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(26,35): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_geo.cpp(40,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  TP3Projet.vcxproj -> C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
