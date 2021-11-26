@@ -40,3 +40,13 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 
 	return route;
 }
+
+void route_liberer(t_route* route)
+{
+	for (int i = 0; i <= route->nb_voies; ++i)
+	{
+		voie_free(route->voies[i]);
+	}
+	
+	free(route);
+}
