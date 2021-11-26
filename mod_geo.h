@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define GEO_POLYGONE_MAX_PTS 4
+#define GEO_POLYGONE_MAX_PTS 50
 
 //Definit un point dans le plan
 typedef struct {

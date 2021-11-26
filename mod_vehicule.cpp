@@ -1,4 +1,3 @@
-
 #include "mod_vehicule.h"
 
 
@@ -17,8 +16,11 @@ t_vehicule* vehicule_init(void)
 
 	vehicule->geometrie; //Initialise la gemoetrie du vehicule
 	vehicule->position = 0;
-	vehicule->vitesse = NULL;
-	vehicule->vitesse_cible = NULL;
+	vehicule->vitesse = VEHICULE_VITESSE_DEFAUT;
+	vehicule->vitesse_cible = VEHICULE_VITESSE_DEFAUT;
+
+	geo_init_polygone(&(vehicule->geometrie), 4);
+	vehicule_reset_geometrie(vehicule);
 
 	return vehicule;
 }

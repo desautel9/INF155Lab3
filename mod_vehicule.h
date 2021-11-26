@@ -10,16 +10,23 @@
 #include <string.h>
 #include <stdio.h>
 
+//La vitesse par defaut d'un nouveau vehicule en KM/h
+#define VEHICULE_VITESSE_DEFAUT 100
+
 //L'accélération maximale d'un véhicule en KM/h.s
 #define VEHICULE_ACCEL_MAX 20
+
 //La déclaration maximale d'un véhicule en KM/h.s
 #define VEHICULE_DECEL_MAX 20
+
 //La longueur en pixels d’un véhicule à l’écran
 #define VEHICULE_LONGUEUR 10
+
 //La largeur, en pixels, d’un véhicule à l’écran
 #define VEHICULE_LARGEUR 4
-typedef struct route t_route; //Type-route qui sera défini plus tard
-typedef struct vehicule t_vehicule;
+
+typedef struct t_route t_route; //Type-route qui sera défini plus tard
+typedef struct t_vehicule t_vehicule;
 //Définit le type struct vehicule
 struct t_vehicule {
 	t_polygone geometrie;
@@ -32,7 +39,7 @@ struct t_vehicule {
 };
 t_vehicule* vehicule_init(void);
 /*Alloue la m�moire pour un v�hicule et initialise la g�om�trie(polygone) du
-v�hicule.Le v�hicule sera positionn� � la position z�ro et aura une vitesse
+v�hicule.Le v�hicule sera positionn� � la position zero et aura une vitesse
 r�elle et une vitesse cible nulles.
 La fonction retourne une r�f�rence vers le v�hicule cr��.
 */

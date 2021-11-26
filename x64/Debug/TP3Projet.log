@@ -1,5 +1,3 @@
-﻿  mod_voie.cpp
-C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_voie.cpp(89): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-  LINK : C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  TP3Projet.vcxproj -> C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+﻿  main.cpp
+H:\INF155\TP3\v1\INF155Lab3\main.cpp(50,40): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  TP3Projet.vcxproj -> H:\INF155\TP3\v1\INF155Lab3\x64\Debug\TP3Projet.exe
