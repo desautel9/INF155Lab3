@@ -1,24 +1,11 @@
-﻿  main.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  mod_dessin.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  mod_geo.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(23,33): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(24,33): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(37,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  mod_route.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_route.cpp(37,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
-  mod_vehicule.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  mod_voie.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
-  winBGIm.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  Génération de code en cours...
-  LINK : C:\Users\David Hill\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  TP3Projet.vcxproj -> C:\Users\David Hill\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+﻿  mod_voie.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(36,62): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '­­­­'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(36,62): error C2065: '­­­­' : identificateur non déclaré
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(37,95): error C2059: erreur de syntaxe : ')'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(39,37): error C2059: erreur de syntaxe : ';'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(44,2): error C2059: erreur de syntaxe : 'else'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(46,1): error C2059: erreur de syntaxe : '}'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(46,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(49,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(49,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
