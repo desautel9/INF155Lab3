@@ -1,5 +1,12 @@
-﻿  mod_voie.cpp
-C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_vehicule.h(31,2): warning C4091: 'typedef ' : ignoré à gauche de 't_vehicule' quand aucune variable n'est déclarée
+﻿  main.cpp
+  mod_dessin.cpp
+  mod_route.cpp
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\main.cpp(22,10): warning C4101: 'route' : variable locale non référencée
+  mod_vehicule.cpp
+  mod_voie.cpp
+  Génération de code en cours...
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_route.cpp(29,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
 C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_voie.cpp(89): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-  LINK : C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_voie.cpp(147): warning C4715: 'voie_dist_vehicule_precedent' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\ar78380\source\repos\desautel9\INF155Lab3\mod_voie.cpp(164): warning C4715: 'voie_vitesse_vehicule_suivant' : les chemins de contrôle ne retournent pas tous une valeur
   TP3Projet.vcxproj -> C:\Users\ar78380\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
