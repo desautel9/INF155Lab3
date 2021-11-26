@@ -129,6 +129,34 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
+double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
+{
+	int pos1, pos2;
+
+	if (voie->nb_vehicules <= 1) // si un seul vehicule sur la voie 
+	{
+		return -1;
+	}
+
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == 0)
+	{
+		pos1 = indice;
+		pos2 = voie->nb_vehicules - 1;
+	}
+	else
+	{
+		pos1 = indice;
+		pos2 = indice - 1;
+	}
+
+
+
+
+	return calculer_distance_vehicules(voie, pos1, pos2);
+
+}
+
 double voie_vitesse_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
 {
 	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
