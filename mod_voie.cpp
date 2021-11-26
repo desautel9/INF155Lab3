@@ -104,12 +104,56 @@ double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
 
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
-	return 0.0;
+	int pos1, pos2;
+
+	if (voie->nb_vehicules <= 1) // si un seul vehicule sur la voie 
+	{
+		return -1;
+	}
+
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == voie->nb_vehicules-1)
+	{
+		 pos1 = indice;
+		 pos2 = 0;
+	}
+	else
+	{
+		 pos1 = indice;
+		 pos2 = indice+1;
+	}
+	
+	 
+
+
+	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
 double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
-	return 0.0;
+
+	int pos1, pos2;
+
+	if (voie->nb_vehicules <= 1) // si un seul vehicule sur la voie 
+	{
+		return -1;
+	}
+	int indice = voie_trouver_vehicule(voie, vehicule);
+	if (indice == 0)
+	{
+		pos1 = indice;
+		pos2 = voie->nb_vehicules-1;
+	}
+	else
+	{
+		pos1 = indice;
+		pos2 = indice - 1;
+	}
+
+
+
+
+	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
 double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule) //David
