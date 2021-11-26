@@ -88,27 +88,35 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
 
-double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
 
-double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
+double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule) //David
+{
+	double vitesse;
+
+	if ()
+	{
+
+	}
+
+
+	return vitesse;
+}
+
+double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule) //David
 {
 	return 0.0;
 }
 
-double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule)
-{
-	return 0.0;
-}
-
-void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
+void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance) //David
 {
 }
 

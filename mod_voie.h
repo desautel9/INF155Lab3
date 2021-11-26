@@ -141,17 +141,50 @@ void voie_afficher_console(t_voie* voie);
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule);
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre
+/*Fonction privée du module « mod_voie » qui calcule la distance entre deux
+véhicules se trouvant sur la voie « voie ».Le premier véhicule se trouve à
+la position « pos1 » du tableau de véhicules de la voie et le second se
+trouve à la position « pos2 ».Dans cette fonction, vous assumez que le
+véhicule se trouvant à « pos1 » est derrière le véhicule à « pos2 ».
+Note : n’oubliez pas que la voie est circulaire, lorsqu’on arrive à la fin
+de la voie, on repart à la position 0.
+*/
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule);//pierre
+/*Retourne la distance entre le véhicule « vehicule » et le véhicule suivant
+sur la voie « voie ».
+Si « vehicule » n’existe pas sur la voie, la fonction retourne une valeur
+négative.
+*/
 
-double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule);
+double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule);//pierre
+/*Retourne la distance entre le véhicule « vehicule » et le véhicule qui le
+précède sur la voie « voie ».
+Si « vehicule » n’existe pas sur la voie, la fonction retourne une valeur
+négative.*/
 
-double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule);
+double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule); //David
+/*Retourne la vitesse cible du véhicule qui précède le véhicule « vehicule »
+sur la voie « voie ».
+Si « vehicule » n’existe pas sur la voie, la fonction retourne une valeur
+négative.*/
 
-double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule);
+double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule); //David
+/*Retourne la vitesse actuelle du véhicule se trouvant après le véhicule
+« vehicule » sur la voie « voie ».
+Si « vehicule » n’existe pas sur la voie, la fonction retourne une valeur
+négative.*/
 
-void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance);
-
-void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance);
+void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance); //David
+/*Fait avancer le véhicule « vehicule » sur la voie « voie » d’une distance
+« distance ».La fonction doit mettre à jour la position du véhicule ainsi
+que la voie.
+Si le véhicule a effectué un tour complet, sa position doit se mettre à jour
+en repartant à 0. Par exemple, si le véhicule était à la position 30.78km
+sur une voie de longueur 30km, la position du véhicule doit être modifiée
+pour la valeur 0.78km.
+De plus, vous devez vous assurer que les véhicules sur la voie soient
+toujours ordonnés par ordre croissant de leur position.*/
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie);
 
