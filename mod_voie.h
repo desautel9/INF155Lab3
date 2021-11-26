@@ -161,7 +161,8 @@ int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule,
 véhicule « vehicule » sur la voie « voie » à la position « indice » du
 tableau, en préservant une distance minimale « distance_min » entre le
 véhicule précédent et le véhicule suivant.
-La fonction reto
+La fonction retourne une valeur vraie si c’est possible, ou une valeur
+fausse sinon.
 pierre
 */
 #endif
