@@ -29,7 +29,8 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 {
 	int indice = voie_position_insertion(voie, vehicule, distance_min);
 
-	if (indice == -1) //si aucune position disponible
+	//si aucune position disponible ou nb_max de vehicule atteint
+	if (indice == -1 || voie->nb_vehicules+1 > MAX_VEHICULES_PAR_VOIE) 
 		return 0;
 
 	//Condition qui verifie si le vehicule respecte la distance minimum
@@ -37,8 +38,13 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 	int distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) > (voie->vehicules[indice - 1]->position);
 	if (distance_devant_ok && distance_arriere_ok)
 	{
+		for (size_t i = voie->nb_vehicules-1; i > indice; i--)
+		{
+			voie->vehicules[i + 1] = voie->vehicules[i];
+		}
 		voie->vehicules[indice] = vehicule;
 		voie->nb_vehicules++;
+		
 		return 1;
 	}
 
@@ -90,12 +96,12 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 	
 }
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
 
-double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
+double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)//pierre a faire
 {
 	return 0.0;
 }
@@ -136,7 +142,7 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int indice, double distance_min)
 {
 
-
+	if()
 
 
 
