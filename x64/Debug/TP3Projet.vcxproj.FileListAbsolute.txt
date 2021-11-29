@@ -1,3 +1,4 @@
 C:\Users\David Hill\source\repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
 C:\Users\AR68800\source\repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
 C:\Users\AR68800\source\repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.pdb
+C:\Users\davij\Desktop\INF155Lab3\x64\Debug\TP3Projet.exe
