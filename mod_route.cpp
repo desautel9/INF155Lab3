@@ -43,7 +43,7 @@ void route_liberer(t_route* route)
 	free(route);
 
 }
-double route_ratio_insatisfaits(const t_route* route)
+double route_ratio_insatisfaits(const t_route* route) // pierre
 {
 	int i;
 	int chauffeur_mecontent=0;
