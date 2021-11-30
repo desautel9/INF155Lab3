@@ -198,4 +198,9 @@ La fonction retourne une valeur vraie si c’est possible, ou une valeur
 fausse sinon.
 pierre
 */
+
+void voie_tri_vehicule(t_vehicule* tab[], int taille);
+/*
+Fonction tri_bulle pour trier les vehicules en ordres croissant
+*/
 #endif

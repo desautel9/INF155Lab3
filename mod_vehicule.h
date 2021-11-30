@@ -60,5 +60,7 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvelle_voie);
 
 double vehicule_calculer_deplacement(t_vehicule* vehicule, double delta_t_sec);
+/*Calcule et retourne la valeur du déplacement du véhicule(passé par
+référence) après un temps delta_t en se basant sur sa vitesse.*/
 
 #endif //INF155_20193_TP3_MOD_VEHICULE_H
