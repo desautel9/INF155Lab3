@@ -54,11 +54,22 @@ paramètre.Ensuite, la fonction doit définir les coordonnées des points du
 polygone en se basant sur VEHICULE_LONGUEUR et VEHICULE_LARGEUR.Le premier
 point du polygone doit absolument se trouver aux coordonnées(0, 0).*/
 
+int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvelle_voie);
+/*
+Modifie la voie du véhicule « vehicule » pour le déplacer vers la voie ayant
+pour numéro « nouvelle_voie » (qui représente l’indice dans le tableau de
+voies de la route « route »).
+La fonction doit retourner une valeur vraie si le changement de voie a pu
+avoir lieu, ou une valeur fausse sinon.
+Note 1 : Plusieurs fonctions développées à la semaine 2 vous seront utiles.
+Note 2 : Ne pas oublier de retirer le véhicule de sa voie actuelle.
+Note 3 : Assurez-vous que la voie existe et que celle-ci n’est pas celle sur
+ laquelle le véhicule se trouve déjà.
+*/
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement);
 
-int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvelle_voie);
-
 double vehicule_calculer_deplacement(t_vehicule* vehicule, double delta_t_sec);
+
 
 #endif //INF155_20193_TP3_MOD_VEHICULE_H

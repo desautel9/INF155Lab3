@@ -54,15 +54,6 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 	}
 }
 
-int voie_changement_voie_possible(const t_voie* nouvelle_voie, const t_vehicule* vehicule)
-{
-	return 0;
-}
-
-void voie_afficher_console(t_voie* voie)
-{
-}
-
 int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, double distance_min)
 {
 	for (int i = 0; i < voie->nb_vehicules; i++)

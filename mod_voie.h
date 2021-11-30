@@ -79,26 +79,6 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule);
  * vehicule: Référence vers le véhicule devant être retiré de la voie.
  */
 
-int voie_changement_voie_possible(const t_voie* nouvelle_voie, const t_vehicule* vehicule); 
-/**
- * VOIE_CHANGEMENT_VOIE_POSSIBLE
- * Détermine si un véhicule (se trouvant sur une voie donnée) peut intégrer
- * la voie passée en paramètre. Le véhicule peut changer de voie si il n'y a
- * aucun autre véhicule sur la nouvelle voie à moins de
- */
-
-void voie_liberer(t_voie* voie);  
-/*Libère l’espace occupé par une voie. La fonction doit notamment libérer
-l’espace mémoire occupé par tous ses véhicules.
-t_route* route_init(int nb_voies, double vitesse_min,
-	double vitesse_max, double longueur_visible,
-	int max_vehicules_voie);
-Alloue l’espace mémoire pour une route et initialise ses champs aux valeurs
-des paramètres transmis.La fonction doit remplir le tableau de références
-vers des voies en créant de nouvelles voies.
-La fonction retourne la référence vers la route créée.
-*/
-
 int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, double distance_min);  
 /*Fonction privée du module qui détermine à quel indice le véhicule
 « vehicule » devrait être inséré dans le tableau de véhicules de la voie
@@ -135,9 +115,6 @@ véhicules et ne doit pas contenir de trous !
 La fonction retourne une valeur vraie si le véhicule a bien supprimé, ou une
 valeur fausse sinon.
 */
-
-
-void voie_afficher_console(t_voie* voie);
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
 
