@@ -43,6 +43,11 @@ vers des voies en cr�ant de nouvelles voies.
 La fonction retourne la r�f�rence vers la route cr��e.
 */
 
+double route_ratio_insatisfaits(const t_route* route);
+/*Calcule le ratio d’automobilistes insatisfaits par rapport au nombre total
+d’automobilistes sur la route.*/
+
+
 int route_sauvegarder_route(const char* nom_fichier, const t_route* route);
 /*
 Sauvegarde l’état de la route « route » dans le fichier texte ayant pour nom

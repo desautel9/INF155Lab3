@@ -220,7 +220,16 @@ void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 {
-	return 0;
+	int i, nb_vehicule_lent=0;
+
+	for (i = 0; i <= voie->nb_vehicule; ++i)
+	{
+		if (voie->vehicules[i]->vitesse < (voie->vehicules[i]->vitesse_cible*0.9))// vitesse vehicule inferieur de 10% de vitesse cible 
+			++nb_vehicule_lent;
+	}
+	
+
+	return nb_vehicule_lent;// retourne le total de vehicule lent sur la voie 
 }
 
 
