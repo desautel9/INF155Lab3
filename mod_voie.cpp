@@ -211,7 +211,16 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 {
-	return 0;
+	int i, j;
+
+	for (i = 0; i <= voie->nb_vehicule; ++i)
+	{
+		if (route->voies->)
+			++j;
+	}
+	
+
+	return j;
 }
 
 
