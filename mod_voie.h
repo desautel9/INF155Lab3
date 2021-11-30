@@ -117,6 +117,10 @@ valeur fausse sinon.
 */
 
 int voie_trouver_vehicule(const t_voie* voie, const t_vehicule* vehicule);
+/*Fonction privée du module qui détermine si le véhicule « vehicule » se
+trouve sur la voie « voie ». Si le véhicule s’y trouve, son indice dans le
+tableau de véhicules de la voie est retourné. Sinon, la fonction retourne la
+valeur -1.*/
 
 double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2);//pierre fait
 /*Fonction privée du module « mod_voie » qui calcule la distance entre deux
@@ -164,6 +168,8 @@ De plus, vous devez vous assurer que les véhicules sur la voie soient
 toujours ordonnés par ordre croissant de leur position.*/
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie);
+/*Compte et renvoie le nombre de véhicules de la voie « voie » qui roulent à
+une vitesse inférieure à leur vitesse cible (on permet une tolérance de 10%).*/
 
 int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule,
 	int indice, double distance_min);
@@ -174,5 +180,10 @@ véhicule précédent et le véhicule suivant.
 La fonction retourne une valeur vraie si c’est possible, ou une valeur
 fausse sinon.
 pierre
+*/
+
+void voie_tri_vehicule(t_vehicule* tab[], int taille);
+/*
+Fonction tri_bulle pour trier les vehicules en ordres croissant
 */
 #endif

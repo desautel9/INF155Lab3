@@ -3,6 +3,7 @@
 
 t_vehicule* vehicule_init(void)
 {
+	//Variables
 	t_vehicule* vehicule;
 
 	//Allouer la mémoire de facon dynamique a un véhicule
@@ -14,19 +15,22 @@ t_vehicule* vehicule_init(void)
 		exit(EXIT_FAILURE);
 	}
 
-	vehicule->geometrie; //Initialise la gemoetrie du vehicule
+	//Initialise les parametres d'un vehicule
+	vehicule->geometrie; 
 	vehicule->position = 0;
 	vehicule->vitesse = VEHICULE_VITESSE_DEFAUT;
 	vehicule->vitesse_cible = VEHICULE_VITESSE_DEFAUT;
 
-	geo_init_polygone(&(vehicule->geometrie), 4);
-	vehicule_reset_geometrie(vehicule);
+	//Mettre un polygone dans un vehicule
+	geo_init_polygone(&(vehicule->geometrie), 4); //4 points dans le vehicule
+	vehicule_reset_geometrie(vehicule); //Faire la forme du vehicule
 
 	return vehicule;
 }
 
 void vehicule_free(t_vehicule* vehicule)
 {
+	free(&vehicule); //Libère l’espace mémoire d’un véhicule
 }
 
 void vehicule_reset_geometrie(t_vehicule* vehicule)

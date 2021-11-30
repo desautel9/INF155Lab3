@@ -1,10 +1,18 @@
-﻿  mod_route.cpp
-C:\Users\davij\Desktop\INF155Lab3\mod_route.cpp(30,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
+﻿  main.cpp
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\main.cpp(50,40): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  mod_dessin.cpp
+  mod_geo.cpp
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(27,28): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(28,35): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_geo.cpp(42,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  mod_route.cpp
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_route.cpp(30,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
   mod_vehicule.cpp
-  winBGIm.cpp
-C:\Users\davij\Desktop\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\davij\Desktop\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\davij\Desktop\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\davij\Desktop\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  mod_voie.cpp
   Génération de code en cours...
-  TP3Projet.vcxproj -> C:\Users\davij\Desktop\INF155Lab3\x64\Debug\TP3Projet.exe
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_voie.cpp(55): warning C4715: 'voie_ajouter_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_voie.cpp(99): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_voie.cpp(185): warning C4715: 'voie_vitesse_vehicule_precedent' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_voie.cpp(202): warning C4715: 'voie_vitesse_vehicule_suivant' : les chemins de contrôle ne retournent pas tous une valeur
+  TP3Projet.vcxproj -> C:\Users\David Hill\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe

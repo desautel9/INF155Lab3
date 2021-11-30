@@ -20,8 +20,10 @@ int geo_ajouter_tab_polygone(t_polygone* poly, t_point pts[], int nb_pts)
 
 void geo_rotation_point(t_point* point, double angle)
 {
+	//Variables
 	int x;
 
+	//Formule permettant de calculer les nouvelles coordonnées
 	x = point->x * cos(angle) - point->y * sin(angle);
 	point->y = point->x * sin(angle) + point->y * cos(angle);
 	point->x = x;
@@ -43,13 +45,15 @@ void geo_init_polygone(t_polygone* poly, int taille)
 
 int geo_ajouter_point_polygone(t_polygone* poly, t_point pt, int position)
 {
-	if (position >= 0 && position + 1 <= poly->nb_points)
+	//Les positions doivent être entre 0 et le nombre de points du polygone - 1.
+	if (position > 0 && position < poly->nb_points - 1) 
 	{
+		//Ajoute le point pt reçu en paramètre au tableau de points du polygone à la position position.
 		poly->points[position] = pt;
 
-		return 1;
+		return 1; //Le point a bien ete ajoute
 	}
-	return 0;
+	return 0; //Position non-valide
 }
 
 void geo_rotation_polygone(t_polygone* poly, double angle)
