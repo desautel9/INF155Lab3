@@ -40,3 +40,19 @@ void route_liberer(t_route* route)
 	free(route);
 
 }
+double route_ratio_insatisfaits(const t_route* route)
+{
+	int i;
+	int chauffeur_mecontent=0;
+	double ratio_insatisfait =0.0;
+	int chauffeur_total =0;
+
+
+	for (i = 0; i <= route->nb_voies; ++i)
+	{
+		chauffeur_mecontent += voie_nb_vehicules_sous_vitesse_cible(route->voies[i]); // somme chauffeur mecontent par voie
+		chauffeur_total += route->voies[i]->nb_vehicules; //somme chauffeur total de la route 
+	}
+	
+	return ratio_insatisfait = chauffeur_mecontent / chauffeur_total; // retourne le ratio d'insatifaction 
+}

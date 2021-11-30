@@ -43,4 +43,9 @@ vers des voies en cr�ant de nouvelles voies.
 La fonction retourne la r�f�rence vers la route cr��e.
 */
 
+double route_ratio_insatisfaits(const t_route* route);
+/*Calcule le ratio d’automobilistes insatisfaits par rapport au nombre total
+d’automobilistes sur la route.*/
+
+
 #endif
