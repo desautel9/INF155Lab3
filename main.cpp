@@ -8,12 +8,12 @@
 #include "mod_route.h"
 #include <time.h>
 
-#define NB_VOIES 3 //entre 1 et 10
-#define NB_VEHICULES 200
+#define NB_VOIES 5 //entre 1 et 10
+#define NB_VEHICULES 50
 #define VITESSE_MIN 50
 #define VITESSE_MAX 150
 #define LONGUEUR 40
-#define DIST_MIN 0.0
+#define DIST_MIN 0.0001
 #define FACILITER_DEPASSEMENTS 1
 
 #define DELAI_ITERATIONS_MS 0
@@ -27,16 +27,7 @@ int main(void)
 
 	route = route_init(NB_VOIES, VITESSE_MIN, VITESSE_MAX, LONGUEUR, NB_VEHICULES);
 
-	for (size_t i = 0; i < route->nb_voies; i++)
-	{
-		voie_ajouter_vehicule(route->voies[i], vehicule_init(), DIST_MIN);
-		voie_ajouter_vehicule(route->voies[i], vehicule_init(), DIST_MIN);
-		voie_ajouter_vehicule(route->voies[i], vehicule_init(), DIST_MIN);
-		voie_ajouter_vehicule(route->voies[i], vehicule_init(), DIST_MIN);
-		route->voies[i]->vehicules[1]->position = 2;
-		route->voies[i]->vehicules[2]->position = 4;
-		route->voies[i]->vehicules[3]->position = 6;
-	}
+	route_ajout_vehicules_aleatoirement(route, NB_VEHICULES);
 
 	do {
 		cleardevice();

@@ -35,12 +35,13 @@ int voie_ajouter_vehicule(t_voie* voie, t_vehicule* vehicule, double distance_mi
 		int indice = voie_position_insertion(voie, vehicule, distance_min);
 		if (voie_insertion_valide(voie, vehicule, indice, distance_min))
 		{
-			for (size_t i = voie->nb_vehicules - 1; i >= indice; i--)
+			for (int i = voie->nb_vehicules - 1; i >= indice; i--)
 			{
 				voie->vehicules[i + 1] = voie->vehicules[i];
 			}
 			voie->vehicules[indice] = vehicule;
 			voie->nb_vehicules++;
+			voie_tri_vehicule(voie->vehicules, voie->nb_vehicules);//juste pour être sur que tout est en ordre
 
 			return 1;
 		}
@@ -60,7 +61,7 @@ int voie_position_insertion(const t_voie* voie, const t_vehicule* vehicule, doub
 	for (int i = 0; i < voie->nb_vehicules; i++)
 	{
 		if (vehicule->position >= voie->vehicules[i]->position)
-			return i + 1;
+			return i;
 	}
 	return 0;
 }
@@ -213,7 +214,7 @@ int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 {
 	int i, nb_vehicule_lent=0;
 
-	for (i = 0; i <= voie->nb_vehicule; ++i)
+	for (i = 0; i <= voie->nb_vehicules; ++i)
 	{
 		if (voie->vehicules[i]->vitesse < (voie->vehicules[i]->vitesse_cible*0.9))// vitesse vehicule inferieur de 10% de vitesse cible 
 			++nb_vehicule_lent;

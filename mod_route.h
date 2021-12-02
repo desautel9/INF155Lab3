@@ -2,7 +2,7 @@
 #include "mod_voie.h"
 #include "mod_vehicule.h"
 #include <stdlib.h> 
-#include <time.h> //Pour la generation de nb aleatoire
+#include <time.h>
 
 #ifndef MOD_ROUTE_H
 #define MOD_ROUTE_H
@@ -100,5 +100,53 @@ infructueux atteint la constante privée MAX_INFRUCTUEUX (= 1000), vous devez
 abandonner et retourner une valeur fausse. Sinon, si tous les nb_vehicules
 ont été placés, vous retournez une valeur vraie.
 */
+
+
+
+
+
+
+/* These functions come from Eric Roberts' "The Art and Science of C". */
+
+/*
+ * Constant: RAND_MAX
+ * ------------------
+ * Unfortunately, several libraries that supposedly conform to
+ * the ANSI standard do not define RAND_MAX in <stdlib.h>.  To
+ * reduce portability problems, this interface defines RAND_MAX
+ * to be the largest positive integer if it is undefined.
+ */
+#ifndef RAND_MAX
+#define RAND_MAX ((int) ((unsigned) ~0 >> 1))
+#endif
+
+
+ /*
+  * Function: InitRandom
+  * --------------------
+  * This function seeds the random number generator
+  * with the current time.  It should be called once
+  * (and only once) prior to calling any other random
+  * number function.
+  */
+void InitRandom(void);
+
+
+/*
+ * Function: RandomReal
+ * --------------------
+ * This function returns a random real number between
+ * low and high, inclusive.
+ */
+double RandomReal(double low, double high);
+
+
+/*
+ * Function: RandomInteger
+ * -----------------------
+ * This function returns a random integer between
+ * low and high, inclusive.
+ */
+int RandomInteger(int low, int high);
 
 #endif

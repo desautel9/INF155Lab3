@@ -59,11 +59,11 @@ int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvel
 
 	for (int i = 0; i < route->nb_voies; i++)
 	{
-		int position_actuelle = voie_trouver_vehicule(route->voies[i]);// on cherche le vehicule dans toutes les voies une par une
+		int position_actuelle = voie_trouver_vehicule(route->voies[i], vehicule);// on cherche le vehicule dans toutes les voies une par une
 		if (position_actuelle != -1) //si on trouve le vehicule
 		{
-			int succes_retrait voie_retirer_vehicule(route->voies[i], vehicule); //on retire le vehicule de sa vieille voie
-			int succes_ajout = voie_ajouter_vehicule(nouvelle_voie, vehicule, DISTANCE_MIN_ENTRE_VEHICULES); //on met le vehicule dans sa nouvelle voie. 
+			int succes_retrait = voie_retirer_vehicule(route->voies[i], vehicule); //on retire le vehicule de sa vieille voie
+			int succes_ajout = voie_ajouter_vehicule(route->voies[nouvelle_voie], vehicule, DISTANCE_MIN_ENTRE_VEHICULES); //on met le vehicule dans sa nouvelle voie. 
 			if (succes_retrait && succes_ajout)
 			{
 				return 1;
