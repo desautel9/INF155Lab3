@@ -24,6 +24,8 @@ int main(void)
 	settextjustify(CENTER_TEXT, CENTER_TEXT);
 	settextstyle(DEFAULT_FONT, HORIZ_DIR, 2);
 	t_route* route;
+	char nom_fichier[100] = "nom_fichier";
+
 
 	route = route_init(NB_VOIES, VITESSE_MIN, VITESSE_MAX, LONGUEUR, NB_VEHICULES);
 
@@ -42,6 +44,7 @@ int main(void)
 				v->position = v->position + vehicule_calculer_deplacement(v, 2);
 			}
 		}
+		route_sauvegarder_route(nom_fichier, route);
 
 		delay_graph(100);
 	} while (!kbhit_graph());
