@@ -1,10 +1,23 @@
-﻿  main.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\main.cpp(1,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\main.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\main.cpp(43,40): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  mod_route.cpp
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_route.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\David Hill\source\repos\desautel9\INF155Lab3\mod_route.cpp(33,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
+﻿  mod_vehicule.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(29,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
+  mod_voie.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.h(18): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.h(18,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
+  winBGIm.cpp
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_vehicule.h(29): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(10,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
   Génération de code en cours...
-  TP3Projet.vcxproj -> C:\Users\David Hill\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(57): warning C4715: 'voie_ajouter_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(92): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(177): warning C4715: 'voie_vitesse_vehicule_precedent' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\AR72330\source\repos\desautel9\INF155Lab3\mod_voie.cpp(195): warning C4715: 'voie_vitesse_vehicule_suivant' : les chemins de contrôle ne retournent pas tous une valeur
+  TP3Projet.vcxproj -> C:\Users\AR72330\Source\Repos\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe

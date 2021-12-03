@@ -96,7 +96,7 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 	//sinon, deplacer le vehicule si le vehicule veut aller plus vite que celui devant.
 	else if(vehicule->vitesse_cible > vitesse_devant &&
 			insertion_gauche_ok)
-
+		
 }
 
 int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvelle_voie)
@@ -104,7 +104,7 @@ int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvel
 
 	for (int i = 0; i < route->nb_voies; i++)
 	{
-		int position_actuelle = voie_trouver_vehicule(route->voies[i], vehicule);// on cherche le vehicule dans toutes les voies une par une
+		int position_actuelle = voie_trouver_vehicule(route->voies[i], vehicule); //on cherche le vehicule dans toutes les voies une par une
 		if (position_actuelle != -1) //si on trouve le vehicule
 		{
 			int succes_retrait = voie_retirer_vehicule(route->voies[i], vehicule); //on retire le vehicule de sa vieille voie
