@@ -178,7 +178,7 @@ double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
 
 double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule) //David
 {
-	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
+	if (voie->nb_vehicules <= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
 	{
 		return -1;
 	}
