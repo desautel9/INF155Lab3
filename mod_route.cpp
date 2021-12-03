@@ -1,4 +1,5 @@
 #include "mod_route.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 void vehicule_liberer(t_vehicule* vehicule)
 {
@@ -92,11 +93,39 @@ double route_ratio_insatisfaits(const t_route* route) // pierre
 
 int route_sauvegarder_route(const char* nom_fichier, const t_route* route)
 {
-	/*FILE* nom_fichier;
+	//Variable texte
+	FILE* mon_fichier;
 
-	route->nb_voies;
-	route->voies[i]->nb_vehicules;*/
-	return 0;
+	//Ouverture d'un fichier txt
+	mon_fichier = fopen(nom_fichier, "w");
+	if (mon_fichier == NULL) //Vérification si ouverture ou non
+	{
+		return 0;
+	}
+
+	fprintf(mon_fichier, "%d\n", route->nb_voies); //Affichier le nombre de voie
+
+	for (int i = 0; i < route->nb_voies; i++) //Parcourir les voies de la routes
+	{	 
+		fprintf(mon_fichier, "%d %d\n", i, route->voies[i]->nb_vehicules); //Afficher le nombre de vehicule dans la voie en quesiton
+
+		for (int j = 0; j < route->voies[i]->nb_vehicules; j++) //Parcourir les voitures de la voie en question
+		{
+			//Afficher la position, la vitesse ainsi que la vitesse cible du vehicule en question
+			fprintf(mon_fichier, "%.2lf %.0lf %.0lf\n", route->voies[i]->vehicules[j]->position, route->voies[i]->vehicules[j]->vitesse, route->voies[i]->vehicules[j]->vitesse_cible);
+		}
+	}
+
+	fclose(mon_fichier); //Fermeture du fichier
+
+	//Si le fichier n'a pas pu etre sauvegarde
+	/*if (sauvegarde du fichier == NULL)
+	{
+	return 0; //Retourne faux si le fichier n'a pas pu etre sauvegarde
+	}
+
+	*/
+	return 1; //Retourne vrai si le fichier a pu être sauvegarde
 }
 
 

@@ -4,6 +4,8 @@
 #include <stdlib.h> 
 #include <time.h>
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #ifndef MOD_ROUTE_H
 #define MOD_ROUTE_H
 
