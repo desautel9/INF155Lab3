@@ -93,7 +93,7 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 	if (distance_devant < DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE &&
 		distance_devant >= 0) //une distance negative indique qu'il n'y a pas de vehicule suivant 
 	{
-		vehicule->vitesse = vitesse_devant;
+		vehicule->vitesse = vitesse_devant - 5;
 	}
 	//sinon, deplacer le vehicule sur la droite si le vehicule est plus lent que celui derriere lui
 	else if (vehicule->vitesse == vehicule->vitesse_cible &&
@@ -109,15 +109,15 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 		vehicule_changer_voie(vehicule, route, indice_voie - 1);
 	}
 	//sinon, si le vehicule devant est trop lent et que le depassement par la droite est permis, on depasse par la droite
-	else if (vehicule->vitesse_cible > vitesse_devant&&
+	else if (vehicule->vitesse_cible > vitesse_devant &&
 			insertion_droite_ok&&
 			faciliter_depassement)
 	{
 		vehicule_changer_voie(vehicule, route, indice_voie + 1);
 	}
 	//sinon, si le vehicule devant est plus lent mais qu'il reste de l'espace entre les deux, on accelere un peu
-	else if (vehicule->vitesse_cible > vitesse_devant&&
-			distance_devant > DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE ||
+	else if ((vehicule->vitesse_cible > vitesse_devant&&
+			distance_devant > DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE) ||
 			distance_devant < 0) //negatif veut dire qu'il n'y a pas d'autres vehicules
 	{
 		vehicule->vitesse *= 1.1; // vitesse +10%
@@ -126,6 +126,7 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 	}
 
 	voie_avancer_vehicule(route->voies[vehicule->voie], vehicule, vehicule_calculer_deplacement(vehicule, delai_sec));
+	voie_tri_vehicule(route->voies[vehicule->voie]->vehicules, route->voies[vehicule->voie]->nb_vehicules);
 }
 
 
@@ -137,14 +138,15 @@ int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvel
 		int position_actuelle = voie_trouver_vehicule(route->voies[i], vehicule); //on cherche le vehicule dans toutes les voies une par une
 		if (position_actuelle != -1) //si on trouve le vehicule
 		{
-			int succes_retrait = voie_retirer_vehicule(route->voies[i], vehicule); //on retire le vehicule de sa vieille voie
-			int succes_ajout = voie_ajouter_vehicule(route->voies[nouvelle_voie], vehicule, DISTANCE_MIN_ENTRE_VEHICULES); //on met le vehicule dans sa nouvelle voie. 
-			if (succes_retrait && succes_ajout)
+			int succes_ajout = voie_ajouter_vehicule(route->voies[nouvelle_voie], vehicule, DISTANCE_MIN_ENTRE_VEHICULES); //on met le vehicule dans sa nouvelle voie.
+			if (succes_ajout)
 			{
+				int succes_retrait = voie_retirer_vehicule(route->voies[i], vehicule); //on retire le vehicule de sa vieille voie
+				vehicule->voie = nouvelle_voie;
 				return 1;
 			}
+			
 		}
-		vehicule->voie = nouvelle_voie;
 	}
 
 	return 0;

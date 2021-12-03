@@ -7,12 +7,13 @@
 #include "winBGIm.h"
 #include "mod_route.h"
 #include <time.h>
+#include <string.h>
 
-#define NB_VOIES 5 //entre 1 et 10
-#define NB_VEHICULES 50
+#define NB_VOIES 3 //entre 1 et 10
+#define NB_VEHICULES 40
 #define VITESSE_MIN 50
 #define VITESSE_MAX 150
-#define DIST_MIN 0.01
+#define DIST_MIN 0.1
 #define FACILITER_DEPASSEMENTS 0
 
 #define DELAI_ITERATIONS_MS 1
@@ -43,8 +44,15 @@ int main(void)
 				dessiner_vehicule(v, i_voie, CENTRE);
 			}
 		}
-		route_sauvegarder_route(nom_fichier, route);
-
+		
+		char message[25] = "Satisfaction: ";
+		char pourcentage_satisfaction[7];
+		sprintf(pourcentage_satisfaction, "%.2f", ((1 - route_ratio_insatisfaits(route)) * 100.0 )); //calcul du pourcentage de satisfaction
+		strcat(message, pourcentage_satisfaction);
+		setcolor(WHITE);
+		outtextxy(CENTRE.x, CENTRE.y, message);
 		delay_graph(100);
 	} while (!kbhit_graph());
+
+	route_sauvegarder_route(nom_fichier, route);
 }

@@ -93,6 +93,7 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 
 double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
 {
+
 	double distance = voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;//saoustraction des distance entre deux vehicules
 
 	if (distance < 0.0) // si valeur negative
@@ -126,7 +127,8 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 		pos2 = indice + 1;
 	}
 
-	return calculer_distance_vehicules(voie, pos1, pos2);
+	if (pos1 > 0 && pos2 > 0)
+		return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
 double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
@@ -149,7 +151,9 @@ double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicu
 		pos1 = indice;
 		pos2 = indice - 1;
 	}
-	return calculer_distance_vehicules(voie, pos1, pos2);
+	if(pos1>0 && pos2>0)
+		return calculer_distance_vehicules(voie, pos1, pos2);
+	return voie->longueur_km;
 }
 
 double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
@@ -180,13 +184,19 @@ double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule)
 
 	int indice = voie_trouver_vehicule(voie, vehicule); //Pour avoir la position du vehicule
 	//Si le véhicule se trouve a l'emplacement 0, on doit prendre le véhicule suivant
-	if (indice == voie->nb_vehicules - 1) 
+	int indice_suivant; //Position du vehicule suivant
+	if (indice == voie->nb_vehicules - 1)
 	{
-		int indice_suivant = voie->nb_vehicules + 1; //Position du vehicule suivant
-		t_vehicule* vehicule_suivant = voie->vehicules[indice_suivant];
-		double vitesse_cible = vehicule_suivant->vitesse_cible;
-		return vitesse_cible;
+		indice_suivant = 0;
 	}
+	else
+	{
+		indice_suivant = indice + 1;
+	}
+
+	t_vehicule* vehicule_suivant = voie->vehicules[indice_suivant];
+	double vitesse_cible = vehicule_suivant->vitesse_cible;
+	return vitesse_cible;
 }
 
 void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
@@ -203,21 +213,19 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 		voie->vehicules[0] = vehicule;
 	}
 
-	//voie_tri_vehicule(voie->vehicules, voie->nb_vehicules); //Tri pour ordonner par ordre croissant de leur position
-	
 }
 
 
 int voie_nb_vehicules_sous_vitesse_cible(t_voie* voie)
 {
-	int i, nb_vehicule_lent=0;
+	int i, nb_vehicule_lent = 0;
 
-	for (i = 0; i <= voie->nb_vehicules; ++i)
+	for (i = 0; i < voie->nb_vehicules; ++i)
 	{
-		if (voie->vehicules[i]->vitesse < (voie->vehicules[i]->vitesse_cible*0.9))// vitesse vehicule inferieur de 10% de vitesse cible 
+		if (voie->vehicules[i]->vitesse < (voie->vehicules[i]->vitesse_cible * 0.9))// vitesse vehicule inferieur de 10% de vitesse cible 
 			++nb_vehicule_lent;
 	}
-	
+
 
 	return nb_vehicule_lent;// retourne le total de vehicule lent sur la voie 
 }

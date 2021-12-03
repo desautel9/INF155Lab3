@@ -3,46 +3,5 @@ C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\main.cpp(1,1): warning 
 C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\main.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
 C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.h(29,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
 C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.h(18): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
-  mod_dessin.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\main.cpp(43,40): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_dessin.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.h(29,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
-  mod_geo.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.h(18): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp(14,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp(27,28): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp(28,35): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
-  mod_route.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_geo.cpp(42,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.h(18,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.h(29): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
-  mod_vehicule.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.cpp(33,29): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.h(29,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
-  mod_voie.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.h(18): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_route.h(7,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.h(18,1): warning C4005: 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE' : redéfinition de macro
-  winBGIm.cpp
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_vehicule.h(29): message : voir la définition précédente de 'DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp(10,1): warning C4005: '_CRT_SECURE_NO_WARNINGS' : redéfinition de macro
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp : message : voir la définition précédente de '_CRT_SECURE_NO_WARNINGS'
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp(1008,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp(1011,47): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp(1041,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  Génération de code en cours...
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\winBGIm.cpp(1050,55): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.cpp(57): warning C4715: 'voie_ajouter_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.cpp(92): warning C4715: 'voie_retirer_vehicule' : les chemins de contrôle ne retournent pas tous une valeur
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.cpp(177): warning C4715: 'voie_vitesse_vehicule_precedent' : les chemins de contrôle ne retournent pas tous une valeur
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\mod_voie.cpp(195): warning C4715: 'voie_vitesse_vehicule_suivant' : les chemins de contrôle ne retournent pas tous une valeur
-mod_vehicule.obj : error LNK2019: symbole externe non résolu "double __cdecl voie_vitesse_cible_vehicule_precedent(struct t_voie *,struct t_vehicule *)" (?voie_vitesse_cible_vehicule_precedent@@YANPEAUt_voie@@PEAUt_vehicule@@@Z) référencé dans la fonction "void __cdecl vehicule_decision(struct t_vehicule *,struct t_route const *,double,int)" (?vehicule_decision@@YAXPEAUt_vehicule@@PEBUt_route@@NH@Z)
-C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe : fatal error LNK1120: 1 externes non résolus
+C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\main.cpp(44,40): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  TP3Projet.vcxproj -> C:\Users\AR68800\Desktop\lab3INF155\desautel9\INF155Lab3\x64\Debug\TP3Projet.exe

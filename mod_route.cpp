@@ -55,7 +55,7 @@ int route_ajout_vehicules_aleatoirement(t_route* route, int nb_vehicules)
 		nouveau_vehicule->voie = indice_voie;
 		nouveau_vehicule->position = nb_aleatoire(0, route->voies[indice_voie]->longueur_km); //choisie une position au hasard entre 0 et la longueur max
 		nouveau_vehicule->vitesse = nb_aleatoire(route->vitesse_min, route->vitesse_max); //choisie une vitesse au hasard entre les minimums et maximums de la route
-		nouveau_vehicule->vitesse_cible = nb_aleatoire(route->vitesse_min, route->vitesse_max); //choisie une vitesse cible au hasard entre les minimums et maximums de la route
+		nouveau_vehicule->vitesse_cible = nb_aleatoire(nouveau_vehicule->vitesse, route->vitesse_max);
 
 		int succes = voie_ajouter_vehicule(route->voies[indice_voie], nouveau_vehicule, DISTANCE_MIN_ENTRE_VEHICULES);
 		if (succes)
@@ -76,19 +76,17 @@ void route_liberer(t_route* route)
 }
 double route_ratio_insatisfaits(const t_route* route) // pierre
 {
-	int i;
 	int chauffeur_mecontent=0;
 	double ratio_insatisfait =0.0;
 	int chauffeur_total =0;
 
-
-	for (i = 0; i <= route->nb_voies; ++i)
+	for (int i = 0; i < route->nb_voies; ++i)
 	{
 		chauffeur_mecontent += voie_nb_vehicules_sous_vitesse_cible(route->voies[i]); // somme chauffeur mecontent par voie
 		chauffeur_total += route->voies[i]->nb_vehicules; //somme chauffeur total de la route 
 	}
 	
-	return ratio_insatisfait = chauffeur_mecontent / chauffeur_total; // retourne le ratio d'insatifaction 
+	return ratio_insatisfait = (double)chauffeur_mecontent / (double)chauffeur_total; // retourne le ratio d'insatifaction 
 }
 
 int route_sauvegarder_route(const char* nom_fichier, const t_route* route)
