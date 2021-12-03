@@ -91,13 +91,13 @@ int voie_retirer_vehicule(t_voie* voie, const t_vehicule* vehicule)
 
 }
 
-double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)//pierre fait
+double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)
 {
-	double distance = voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;
+	double distance = voie->vehicules[pos2]->position - voie->vehicules[pos1]->position;//saoustraction des distance entre deux vehicules
 
-	if (distance < 0.0)
+	if (distance < 0.0) // si valeur negative
 	{
-		distance = distance + LONGUEUR_VOIE_KM;
+		distance = distance + LONGUEUR_VOIE_KM;// il faut ajouter la longueur d ela voie pour retourner la valeur positive 
 		return distance;
 	}
 
@@ -105,7 +105,7 @@ double calculer_distance_vehicules(const t_voie* voie, int pos1, int pos2)//pier
 	return distance;
 }
 
-double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)//pierre fait
+double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule)
 {
 	int pos1, pos2;
 
@@ -126,7 +126,7 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 		pos2 = indice + 1;
 	}
 
-	return calculer_distance_vehicules(voie, pos1, pos2);//pierre fait
+	return calculer_distance_vehicules(voie, pos1, pos2);
 }
 
 double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicule)
@@ -237,13 +237,13 @@ int voie_insertion_valide(const t_voie* voie, const t_vehicule* vehicule, int in
 	int distance_arriere_ok = 1;
 
 	if (voie->nb_vehicules - 1 > indice)
-		distance_devant_ok = (voie->vehicules[indice]->position + distance_min) <= voie->vehicules[indice + 1]->position;
+		distance_devant_ok = (voie->vehicules[indice]->position + distance_min) <= voie->vehicules[indice + 1]->position;// compare si il y a la place en avant pour isertion 
 
 	if (indice > 0)
-		distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) >= (voie->vehicules[indice - 1]->position);
+		distance_arriere_ok = (voie->vehicules[indice]->position - distance_min) >= (voie->vehicules[indice - 1]->position);// compare si il y a la place minimum en arriere pour insertion
 
-	if (distance_devant_ok && distance_arriere_ok)
-		return 1;
+	if (distance_devant_ok && distance_arriere_ok) // il faut la place minimum en arriere et en avant pour insertion
+		return 1;// insertion valide 
 	else
 		return 0;
 }

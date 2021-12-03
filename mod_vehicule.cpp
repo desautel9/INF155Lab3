@@ -37,17 +37,17 @@ void vehicule_reset_geometrie(t_vehicule* vehicule)
 {
 	geo_init_polygone(&(vehicule->geometrie), 4);
 
-	vehicule->geometrie.points[0].x = 0;
+	vehicule->geometrie.points[0].x = 0;// premier point en abcisse et en ordonne du rectangle representant le vehicule sur la voie
 	vehicule->geometrie.points[0].y = 0;
 
-	vehicule->geometrie.points[1].x = VEHICULE_LONGUEUR;
+	vehicule->geometrie.points[1].x = VEHICULE_LONGUEUR; // second point a droite de la longueur du vehicule
 	vehicule->geometrie.points[1].y = 0;
 
-	vehicule->geometrie.points[2].x = VEHICULE_LONGUEUR;
+	vehicule->geometrie.points[2].x = VEHICULE_LONGUEUR;// troisieme point de longueur et largeur vehicule  
 	vehicule->geometrie.points[2].y = VEHICULE_LARGEUR;
 
 	vehicule->geometrie.points[3].x = 0;
-	vehicule->geometrie.points[3].y = VEHICULE_LARGEUR;
+	vehicule->geometrie.points[3].y = VEHICULE_LARGEUR;// dernier point fermant le rectangle representant le vehicule 
 }
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement)
