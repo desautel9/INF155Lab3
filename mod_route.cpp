@@ -116,15 +116,11 @@ int route_sauvegarder_route(const char* nom_fichier, const t_route* route)
 		}
 	}
 
-	fclose(mon_fichier); //Fermeture du fichier
-
-	//Si le fichier n'a pas pu etre sauvegarde
-	/*if (sauvegarde du fichier == NULL)
+	if (fclose(mon_fichier) != 0) //Si la fermeture du fichier ne se fait pas comme il faut
 	{
-	return 0; //Retourne faux si le fichier n'a pas pu etre sauvegarde
+		return 0;
 	}
 
-	*/
 	return 1; //Retourne vrai si le fichier a pu être sauvegarde
 }
 
