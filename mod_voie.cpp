@@ -194,7 +194,7 @@ double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule) //David
 	}
 }
 
-void voie_avance_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
+void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 {
 	vehicule->position += distance; //Fait avancer le vehicule d'une distance
 
