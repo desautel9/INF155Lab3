@@ -30,7 +30,7 @@ t_route* route_init(int nb_voies, double vitesse_min, double vitesse_max, double
 	for (int i = 0; i < nb_voies; i++)
 	{
 		//Remplit le tableau de références vers des voies en créant de nouvelles voies
-		t_voie* voies = voie_init(longueur_visible, max_vehicules_voie);
+		t_voie* voies = voie_init(max_vehicules_voie, longueur_visible);
 		route->voies[i] = voies;
 	}
 

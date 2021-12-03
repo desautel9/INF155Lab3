@@ -12,11 +12,10 @@
 #define NB_VEHICULES 50
 #define VITESSE_MIN 50
 #define VITESSE_MAX 150
-#define LONGUEUR 40
 #define DIST_MIN 0.01
-#define FACILITER_DEPASSEMENTS 1
+#define FACILITER_DEPASSEMENTS 0
 
-#define DELAI_ITERATIONS_MS 0
+#define DELAI_ITERATIONS_MS 1
 
 int main(void)
 {	
@@ -27,7 +26,7 @@ int main(void)
 	char nom_fichier[100] = "nom_fichier";
 
 
-	route = route_init(NB_VOIES, VITESSE_MIN, VITESSE_MAX, LONGUEUR, NB_VEHICULES);
+	route = route_init(NB_VOIES, VITESSE_MIN, VITESSE_MAX, LONGUEUR_VOIE_KM, NB_VEHICULES);
 
 	route_ajout_vehicules_aleatoirement(route, NB_VEHICULES);
 
@@ -40,8 +39,8 @@ int main(void)
 			for (size_t i_vehicule = 0; i_vehicule < route->voies[i_voie]->nb_vehicules; i_vehicule++)
 			{
 				t_vehicule* v = route->voies[i_voie]->vehicules[i_vehicule];
+				vehicule_decision(v, route, DELAI_ITERATIONS_MS, FACILITER_DEPASSEMENTS);
 				dessiner_vehicule(v, i_voie, CENTRE);
-				v->position = v->position + vehicule_calculer_deplacement(v, 2);
 			}
 		}
 		route_sauvegarder_route(nom_fichier, route);

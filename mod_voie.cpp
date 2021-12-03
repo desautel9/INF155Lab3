@@ -196,9 +196,15 @@ void voie_avancer_vehicule(t_voie* voie, t_vehicule* vehicule, double distance)
 	if (vehicule->position > voie->longueur_km) //Si le vehicule fait un tour complet et plus
 	{
 		vehicule->position -= voie->longueur_km; //Position du vehicule modifié au restant de la longeur_km
+		for (int i = voie->nb_vehicules - 1; i > 0; i--)
+		{
+			voie->vehicules[i] = voie->vehicules[i - 1];
+		}
+		voie->vehicules[0] = vehicule;
 	}
 
-	voie_tri_vehicule(voie->vehicules, voie->nb_vehicules); //Tri pour ordonner par ordre croissant de leur position
+	//voie_tri_vehicule(voie->vehicules, voie->nb_vehicules); //Tri pour ordonner par ordre croissant de leur position
+	
 }
 
 

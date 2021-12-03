@@ -125,9 +125,7 @@ void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_
 			vehicule->vitesse = vehicule->vitesse_cible;
 	}
 
-	vehicule->position = vehicule->position + vehicule_calculer_deplacement(vehicule, delai_sec);
-	if (vehicule->position > route->voies[vehicule->voie]->longueur_km)
-		vehicule->position -= route->voies[vehicule->voie]->longueur_km;
+	voie_avancer_vehicule(route->voies[vehicule->voie], vehicule, vehicule_calculer_deplacement(vehicule, delai_sec));
 }
 
 
