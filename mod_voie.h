@@ -131,6 +131,7 @@ véhicule se trouvant à « pos1 » est derrière le véhicule à « pos2 ».
 Note : n’oubliez pas que la voie est circulaire, lorsqu’on arrive à la fin
 de la voie, on repart à la position 0.
 */
+
 double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule);//pierre
 /*Retourne la distance entre le véhicule « vehicule » et le véhicule suivant
 sur la voie « voie ».

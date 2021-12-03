@@ -50,11 +50,11 @@ int route_ajout_vehicules_aleatoirement(t_route* route, int nb_vehicules)
 	{
 		t_vehicule* nouveau_vehicule = vehicule_init();
 
-		int indice_voie = RandomInteger(0, route->nb_voies-1); //choisie une voie au hasard
+		int indice_voie = entier_aleatoire(0, route->nb_voies-1); //choisie une voie au hasard
 		nouveau_vehicule->voie = indice_voie;
-		nouveau_vehicule->position = RandomReal(0, route->voies[indice_voie]->longueur_km); //choisie une position au hasard entre 0 et la longueur max
-		nouveau_vehicule->vitesse = RandomReal(route->vitesse_min, route->vitesse_max); //choisie une vitesse au hasard entre les minimums et maximums de la route
-		nouveau_vehicule->vitesse_cible = RandomReal(route->vitesse_min, route->vitesse_max); //choisie une vitesse cible au hasard entre les minimums et maximums de la route
+		nouveau_vehicule->position = nb_aleatoire(0, route->voies[indice_voie]->longueur_km); //choisie une position au hasard entre 0 et la longueur max
+		nouveau_vehicule->vitesse = nb_aleatoire(route->vitesse_min, route->vitesse_max); //choisie une vitesse au hasard entre les minimums et maximums de la route
+		nouveau_vehicule->vitesse_cible = nb_aleatoire(route->vitesse_min, route->vitesse_max); //choisie une vitesse cible au hasard entre les minimums et maximums de la route
 
 		int succes = voie_ajouter_vehicule(route->voies[indice_voie], nouveau_vehicule, DISTANCE_MIN_ENTRE_VEHICULES);
 		if (succes)
@@ -101,29 +101,18 @@ int route_sauvegarder_route(const char* nom_fichier, const t_route* route)
 
 
 
-
-
-
 void InitRandom(void)
 {
 	srand((int)time(NULL));
 }
 
-double RandomReal(double low, double high)
+double nb_aleatoire(double min, double max)
 {
-	double d;
-
-	d = (double)rand() / ((double)RAND_MAX + 1);
-	return (low + d * (high - low));
+	return min + rand() / (RAND_MAX + 0.001) * (max - min + 1);
 }
 
 
-int RandomInteger(int low, int high)
+int entier_aleatoire(int min, int max)
 {
-	int k;
-	double d;
-
-	d = (double)rand() / ((double)RAND_MAX + 1);
-	k = (int)(d * (high - low + 1));
-	return (low + k);
+	return (rand() % (max - min + 1)) + min;
 }

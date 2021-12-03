@@ -126,9 +126,6 @@ double voie_dist_vehicule_suivant(const t_voie* voie, const t_vehicule* vehicule
 		pos2 = indice + 1;
 	}
 
-
-
-
 	return calculer_distance_vehicules(voie, pos1, pos2);//pierre fait
 }
 

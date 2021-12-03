@@ -52,6 +52,51 @@ void vehicule_reset_geometrie(t_vehicule* vehicule)
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement)
 {
+	//on commence par trouver ou est le vehicule en question
+	t_voie* voie;
+	int indice_voie;
+	int indice_vehicule;
+	for (int i = 0; i < route->nb_voies; i++нн)
+	{
+		int indice_possible = voie_trouver_vehicule(route->voies[i], vehicule);
+		if (indice_possible > 0)
+		{
+			indice_voie = i;
+			indice = indice_possible;
+			voie = route->voies[i];
+			break; //on a trouve le vehicule, pas besoin de continuer a chercher
+		}
+	}
+	
+	//toutes les informations dont on a besoins pour les conditions qui suivent
+	double distance_derriere = voie_dist_vehicule_precedent(voie, vehicule);
+	double distance_devant = voie_dist_vehicule_suivant(voie, vehicule);
+	double vitesse_cible_derriere = voie_vitesse_cible_vehicule_precedent(voie, vehicule);
+	double vitesse_devant = voie_vitesse_vehicule_suivant(voie, vehicule);
+	int insertion_droite_ok = 0;
+	int insertion_droite_pos = voie_position_insertion(voie, vehicule, DISTANCE_MIN_ENTRE_VEHICULES);
+	if (voie_indice < route->nb_voies - 1)
+		insertion_droite_ok = voie_insertion_valide(route->voies[indice_voie + 1], vehicule, insertion_droite_pos);
+	int insertion_gauche_ok;
+	int insertion_gauche_pos;
+
+	//reduire la vitesse si on est trop proche
+	if (distance_devant < DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE &&
+		distance_devant >= 0) //une distance negative indique qu'il n'y a pas de vehicule suivant 
+	{
+		vehicule->vitesse = voie->vehicules[indice_vehicule+1]->position
+	}
+	//sinon, deplacer le vehicule sur la droite si le vehicule est plus lent que celui derriere lui
+	else if (vehicule->vitesse == vehicule->vitesse_cible &&
+		vitesse_cible_derriere > vehicule->vitesse&&
+		insertion_droite_ok)
+	{
+		vehicule_changer_voie(vehicule, route, indice_voie + 1);
+	}
+	//sinon, deplacer le vehicule si le vehicule veut aller plus vite que celui devant.
+	else if(vehicule->vitesse_cible > vitesse_devant &&
+			insertion_gauche_ok)
+
 }
 
 int vehicule_changer_voie(t_vehicule* vehicule, const t_route* route, int nouvelle_voie)

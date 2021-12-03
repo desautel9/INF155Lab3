@@ -102,51 +102,25 @@ ont été placés, vous retournez une valeur vraie.
 */
 
 
-
-
-
-
-/* These functions come from Eric Roberts' "The Art and Science of C". */
-
 /*
- * Constant: RAND_MAX
- * ------------------
- * Unfortunately, several libraries that supposedly conform to
- * the ANSI standard do not define RAND_MAX in <stdlib.h>.  To
- * reduce portability problems, this interface defines RAND_MAX
- * to be the largest positive integer if it is undefined.
- */
-#ifndef RAND_MAX
-#define RAND_MAX ((int) ((unsigned) ~0 >> 1))
-#endif
-
-
- /*
-  * Function: InitRandom
-  * --------------------
-  * This function seeds the random number generator
-  * with the current time.  It should be called once
-  * (and only once) prior to calling any other random
-  * number function.
-  */
+Fonction: InitRandom
+Initialise le générateur de nombre aleatoire. 
+Doit etre appele avant nb_aleatoire() et entier_aleatoire()
+*/
 void InitRandom(void);
 
 
 /*
- * Function: RandomReal
- * --------------------
- * This function returns a random real number between
- * low and high, inclusive.
+ Fonction: nb_aleatoire
+ Retourne un nombre decimal entre min et max.
  */
-double RandomReal(double low, double high);
+double nb_aleatoire(double min, double max);
 
 
 /*
- * Function: RandomInteger
- * -----------------------
- * This function returns a random integer between
- * low and high, inclusive.
- */
-int RandomInteger(int low, int high);
+Fonction: entier_aleatoire
+Retourne un nombre aléatoire entre min et max.
+*/
+int entier_aleatoire(int min, int max);
 
 #endif

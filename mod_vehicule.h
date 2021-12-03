@@ -25,6 +25,9 @@
 //La largeur, en pixels, d’un véhicule à l’écran
 #define VEHICULE_LARGEUR 4
 
+//Distance que les vehicules essaient de garder entre eux
+#define DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE 0.1
+
 typedef struct t_route t_route; //Type-route qui sera défini plus tard
 typedef struct t_vehicule t_vehicule;
 //Définit le type struct vehicule
@@ -68,6 +71,36 @@ Note 3 : Assurez-vous que la voie existe et que celle-ci n’est pas celle sur
 */
 
 void vehicule_decision(t_vehicule* vehicule, const t_route* route, double delai_sec, int faciliter_depassement);
+/*
+Simule la décision d’un automobiliste après un délai « delai_sec » secondes
+depuis sa dernière décision.Voici l’algorithme visant à adapter la vitesse
+du véhicule :
+-Si le véhicule se trouve à moins
+que DISTANCE_MIN_ENTRE_VEHICULES_FREINAGE du véhicule se trouvant
+devant lui sur la voie, réduire la vitesse à celle du véhicule
+d’après.
+- Sinon, si le véhicule roule à sa vitesse cible mais que le véhicule
+immédiatement derrière roule à une vitesse supérieure, et que le
+changement de voie par la droite est possible, se déplacer sur la voie
+de droite.
+- Sinon, si le véhicule se trouvant devant roule à une vitesse
+inférieure à la vitesse cible du véhicule, et qu’il est possible de
+changer de voie par la gauche, changer de voie par la gauche.
+- Sinon, si le véhicule se trouvant devant roule à une vitesse
+inférieure à la vitesse cible du véhicule, qu’il est possible de
+changer de voie par la droite et que le changement de voie par droite
+est permis, changer de voie par la droite.Le paramètre
+« depassement_droite », s’il est vrai, indique que le dépassement par
+la droite est permis.
+- Sinon, si le véhicule se trouvant devant roule à une vitesse
+inférieure à la vitesse cible du véhicule et qu’il est à une distance
+d’au moins DISTANCE_MIN_ENTRE_VEHICULES_DEPASSEMENT, accélérer de 10 %
+relativement à la vitesse actuelle du véhicule, sans dépasser la
+vitesse cible du véhicule.
+- Sinon, préserver la vitesse actuelle.
+Une fois la nouvelle vitesse du véhicule déterminée, faites avancer le
+véhicule sur sa voie.*/
+
 
 double vehicule_calculer_deplacement(t_vehicule* vehicule, double delta_t_sec);
 /*Calcule et retourne la valeur du déplacement du véhicule(passé par
