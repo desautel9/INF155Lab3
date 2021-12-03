@@ -24,7 +24,7 @@ int main(void)
 	settextjustify(CENTER_TEXT, CENTER_TEXT);
 	settextstyle(DEFAULT_FONT, HORIZ_DIR, 2);
 	t_route* route;
-	char nom_fichier[100] = "nom_fichier";
+	char nom_fichier[100] = "Sauvegarde_de_la_simulation";
 
 
 	route = route_init(NB_VOIES, VITESSE_MIN, VITESSE_MAX, LONGUEUR_VOIE_KM, NB_VEHICULES);
