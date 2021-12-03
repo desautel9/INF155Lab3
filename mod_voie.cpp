@@ -149,12 +149,7 @@ double voie_dist_vehicule_precedent(const t_voie* voie, const t_vehicule* vehicu
 		pos1 = indice;
 		pos2 = indice - 1;
 	}
-
-
-
-
 	return calculer_distance_vehicules(voie, pos1, pos2);
-
 }
 
 double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
@@ -176,9 +171,9 @@ double voie_vitesse_cible_vehicule_precedent(t_voie* voie, t_vehicule* vehicule)
 	}
 }
 
-double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule) //David
+double voie_vitesse_vehicule_suivant(t_voie* voie, t_vehicule* vehicule)
 {
-	if (voie->nb_vehicules >= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
+	if (voie->nb_vehicules <= 1) //Si il n'y a que 1 ou 0 véhicule sur la route
 	{
 		return -1;
 	}
