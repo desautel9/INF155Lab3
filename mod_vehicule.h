@@ -35,11 +35,10 @@ struct t_vehicule {
 	t_polygone geometrie;
 	double position; //La position actuelle du véhicule sur l'autoroute
 	double vitesse; //La vitesse actuelle du véhicule
-	double vitesse_cible; //La vitesse idéale que souhaite avoir le
-	//conducteur du véhicule
-	int voie; //La voie sur laquelle se trouve le véhicule.
-	//-1 si le véhicule n'est sur aucune voie.
+	double vitesse_cible; //La vitesse idéale que souhaite avoir le conducteur du véhicule
+	int voie; //La voie sur laquelle se trouve le véhicule. -1 si le véhicule n'est sur aucune voie.
 };
+
 t_vehicule* vehicule_init(void);
 /*Alloue la m�moire pour un v�hicule et initialise la g�om�trie(polygone) du
 v�hicule.Le v�hicule sera positionn� � la position zero et aura une vitesse
